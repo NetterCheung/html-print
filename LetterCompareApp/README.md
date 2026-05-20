@@ -2,9 +2,12 @@
 
 Side-by-side viewer (no CefSharp — works with Windows Security / Smart App Control):
 
-- **Left:** Microsoft **Edge** (WebView2) → `V5_LODI001A_IE.html`
-- **Right:** **Chrome layout preview** (WebView2 with Chrome user-agent) → `V6_LODI001A_CHROME.html`
-- **Button “Open V6 in Chrome”** → opens V6 in **installed Google Chrome** (real Chrome)
+- **Left:** Microsoft **Edge** (WebView2) — default `V5_LODI001A_IE.html`, or **Browse…** to pick any HTML file
+- **Right:** **Chrome layout preview** (WebView2 with Chrome user-agent) — default `V6_LODI001A_CHROME.html`, or **Browse…**
+- **Swap** — exchange left and right files
+- **Open right in Chrome** — opens the current right-hand file in installed Google Chrome
+
+Last-used left/right paths are saved to `%LocalAppData%\LetterCompareApp\settings.json` and restored on next launch.
 
 ## Why CefSharp was removed
 
@@ -36,8 +39,8 @@ dotnet build -c Release
 | Mode | Behaviour |
 |------|-----------|
 | Both together | Scroll either panel — both align |
-| V5 / Edge only | Left only |
-| V6 only | Right only |
+| Left only | Left pane only |
+| Right only | Right pane only |
 | Independent | Each side separate |
 
-For **final Chrome sign-off**, use **Open V6 in Chrome** or print from Chrome directly.
+For **final Chrome sign-off**, use **Open right in Chrome** or print from Chrome directly.

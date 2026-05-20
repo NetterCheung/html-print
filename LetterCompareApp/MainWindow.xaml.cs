@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Microsoft.Win32;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.Wpf;
 
@@ -29,12 +30,15 @@ public partial class MainWindow : Window
   document.addEventListener('scroll',notify,{passive:true});
 })();";
 
-	private readonly string _htmlDir;
-	private readonly string _v5Path;
-	private readonly string _v6Path;
 	private const double ZoomMin = 0.5;
 	private const double ZoomMax = 1.5;
 	private const double ZoomStep = 0.1;
+
+	private readonly string _htmlDir;
+	private string _leftPath;
+	private string _rightPath;
+	private bool _webViewsInitialized;
+	private CoreWebView2Environment? _chromeEnv;
 
 	private bool _locking;
 	private bool _zoomLocking;
@@ -48,10 +52,18 @@ public partial class MainWindow : Window
 	{
 		InitializeComponent();
 		_htmlDir = FindHtmlDirectory();
-		_v5Path = Path.Combine(_htmlDir, "V5_LODI001A_IE.html");
-		_v6Path = Path.Combine(_htmlDir, "V6_LODI001A_CHROME.html");
+		var defaults = (
+			Left: Path.Combine(_htmlDir, "V5_LODI001A_IE.html"),
+			Right: Path.Combine(_htmlDir, "V6_LODI001A_CHROME.html"));
+		var saved = AppSettings.Load();
+		_leftPath = ResolvePath(saved.LeftPath, defaults.Left);
+		_rightPath = ResolvePath(saved.RightPath, defaults.Right);
+		UpdatePathLabels();
 		Loaded += MainWindow_Loaded;
 	}
+
+	private static string ResolvePath(string? candidate, string fallback) =>
+		!string.IsNullOrWhiteSpace(candidate) && File.Exists(candidate) ? candidate : fallback;
 
 	private static string FindHtmlDirectory()
 	{
@@ -70,28 +82,117 @@ public partial class MainWindow : Window
 		RefreshStatusText();
 		try
 		{
-			if (!File.Exists(_v5Path) || !File.Exists(_v6Path))
-			{
-				StatusText.Text = "HTML files not found in: " + _htmlDir;
-				return;
-			}
+			await InitializeWebViewsAsync();
+			await LoadDocumentsAsync();
+		}
+		catch (Exception ex)
+		{
+			StatusText.Text = "Error: " + ex.Message;
+		}
+	}
 
-			var chromeProfile = Path.Combine(
-				Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-				"LetterCompareApp", "ChromePreviewProfile");
-			Directory.CreateDirectory(chromeProfile);
+	private async Task InitializeWebViewsAsync()
+	{
+		if (_webViewsInitialized) return;
 
-			var chromeOptions = new CoreWebView2EnvironmentOptions(
-				"--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
-			var chromeEnv = await CoreWebView2Environment.CreateAsync(null, chromeProfile, chromeOptions);
+		var chromeProfile = Path.Combine(
+			Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+			"LetterCompareApp", "ChromePreviewProfile");
+		Directory.CreateDirectory(chromeProfile);
 
-			await EdgeView.EnsureCoreWebView2Async();
-			SetupWebView(EdgeView, isEdge: true, onReady: () => _edgeReady = true);
-			EdgeView.Source = new Uri(_v5Path);
+		var chromeOptions = new CoreWebView2EnvironmentOptions(
+			"--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36");
+		_chromeEnv = await CoreWebView2Environment.CreateAsync(null, chromeProfile, chromeOptions);
 
-			await ChromeView.EnsureCoreWebView2Async(chromeEnv);
-			SetupWebView(ChromeView, isEdge: false, onReady: () => _chromeReady = true);
-			ChromeView.Source = new Uri(_v6Path);
+		await EdgeView.EnsureCoreWebView2Async();
+		SetupWebView(EdgeView, isEdge: true, onReady: () => _edgeReady = true);
+
+		await ChromeView.EnsureCoreWebView2Async(_chromeEnv);
+		SetupWebView(ChromeView, isEdge: false, onReady: () => _chromeReady = true);
+
+		_webViewsInitialized = true;
+	}
+
+	private async Task LoadDocumentsAsync()
+	{
+		if (!_webViewsInitialized)
+			await InitializeWebViewsAsync();
+
+		UpdatePathLabels();
+
+		if (!File.Exists(_leftPath) || !File.Exists(_rightPath))
+		{
+			StatusText.Text = "File not found — use Browse to pick HTML files.";
+			return;
+		}
+
+		_edgeReady = false;
+		_chromeReady = false;
+		_edgeScrollPct = 0;
+		_chromeScrollPct = 0;
+		_zoomPercent = 100;
+		EdgeView.ZoomFactor = 1.0;
+		ChromeView.ZoomFactor = 1.0;
+
+		EdgeView.Source = new Uri(_leftPath);
+		ChromeView.Source = new Uri(_rightPath);
+
+		new AppSettings { LeftPath = _leftPath, RightPath = _rightPath }.Save();
+		RefreshStatusText();
+	}
+
+	private void UpdatePathLabels()
+	{
+		LeftPathText.Text = Path.GetFileName(_leftPath);
+		LeftPathText.ToolTip = _leftPath;
+		RightPathText.Text = Path.GetFileName(_rightPath);
+		RightPathText.ToolTip = _rightPath;
+		LeftHeaderText.Text = "LEFT — Microsoft Edge (WebView2)  ·  " + Path.GetFileName(_leftPath);
+		RightHeaderText.Text = "RIGHT — Chrome layout preview (WebView2)  ·  " + Path.GetFileName(_rightPath);
+	}
+
+	private void BrowseLeft_Click(object sender, RoutedEventArgs e) => PickHtmlFile(isLeft: true);
+
+	private void BrowseRight_Click(object sender, RoutedEventArgs e) => PickHtmlFile(isLeft: false);
+
+	private async void PickHtmlFile(bool isLeft)
+	{
+		var current = isLeft ? _leftPath : _rightPath;
+		var initialDir = Directory.Exists(Path.GetDirectoryName(current) ?? "")
+			? Path.GetDirectoryName(current)!
+			: _htmlDir;
+
+		var dlg = new OpenFileDialog
+		{
+			Title = isLeft ? "Select left HTML file" : "Select right HTML file",
+			Filter = "HTML files (*.html;*.htm)|*.html;*.htm|All files (*.*)|*.*",
+			InitialDirectory = initialDir,
+			FileName = Path.GetFileName(current)
+		};
+
+		if (dlg.ShowDialog(this) != true) return;
+
+		if (isLeft)
+			_leftPath = dlg.FileName;
+		else
+			_rightPath = dlg.FileName;
+
+		try
+		{
+			await LoadDocumentsAsync();
+		}
+		catch (Exception ex)
+		{
+			StatusText.Text = "Error: " + ex.Message;
+		}
+	}
+
+	private async void Swap_Click(object sender, RoutedEventArgs e)
+	{
+		(_leftPath, _rightPath) = (_rightPath, _leftPath);
+		try
+		{
+			await LoadDocumentsAsync();
 		}
 		catch (Exception ex)
 		{
@@ -142,7 +243,6 @@ public partial class MainWindow : Window
 		return double.TryParse(json.Substring(start, end - start).Trim(), out var r) ? r : 0;
 	}
 
-	/// <summary>User scrolled one pane — sync only the other pane in "both" mode.</summary>
 	private async Task OnPaneScrolledAsync(bool fromEdge, double ratio)
 	{
 		var pct = (int)Math.Round(ratio * 100);
@@ -224,13 +324,15 @@ requestAnimationFrame(function(){{ window.__letterCompareSuppress=false; }});");
 		var labels = new System.Collections.Generic.Dictionary<string, string>
 		{
 			["both"] = "Both together",
-			["v5"] = "V5 / Edge only",
-			["v6"] = "V6 only",
+			["v5"] = "Left only",
+			["v6"] = "Right only",
 			["independent"] = "Independent"
 		};
 		var mode = ScrollMode;
+		var leftName = Path.GetFileName(_leftPath);
+		var rightName = Path.GetFileName(_rightPath);
 		StatusText.Text =
-			$"Mode: {labels[mode]}  |  Zoom {_zoomPercent}%  |  Edge scroll {_edgeScrollPct}%  |  V6 scroll {_chromeScrollPct}%  |  Ctrl+wheel to zoom";
+			$"Mode: {labels[mode]}  |  {leftName} ↔ {rightName}  |  Zoom {_zoomPercent}%  |  Left scroll {_edgeScrollPct}%  |  Right scroll {_chromeScrollPct}%  |  Ctrl+wheel to zoom";
 	}
 
 	private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -372,35 +474,38 @@ requestAnimationFrame(function(){{ window.__letterCompareSuppress=false; }});");
 		await RefreshScrollPercentAsync();
 	}
 
-	private void Reload_Click(object sender, RoutedEventArgs e)
+	private async void Reload_Click(object sender, RoutedEventArgs e)
 	{
-		_edgeReady = false;
-		_chromeReady = false;
-		_edgeScrollPct = 0;
-		_chromeScrollPct = 0;
-		_zoomPercent = 100;
-		EdgeView.ZoomFactor = 1.0;
-		ChromeView.ZoomFactor = 1.0;
-		RefreshStatusText();
-		if (EdgeView.CoreWebView2 != null)
-			EdgeView.Source = new Uri(_v5Path);
-		if (ChromeView.CoreWebView2 != null)
-			ChromeView.Source = new Uri(_v6Path);
+		try
+		{
+			await LoadDocumentsAsync();
+		}
+		catch (Exception ex)
+		{
+			StatusText.Text = "Error: " + ex.Message;
+		}
 	}
 
 	private void OpenInChrome_Click(object sender, RoutedEventArgs e)
 	{
+		if (!File.Exists(_rightPath))
+		{
+			MessageBox.Show("Right-hand file not found: " + _rightPath, "File not found",
+				MessageBoxButton.OK, MessageBoxImage.Warning);
+			return;
+		}
+
 		var chrome = FindChromeExe();
 		if (chrome == null)
 		{
-			MessageBox.Show("Google Chrome not found. Install Chrome or open V6_LODI001A_CHROME.html manually.",
+			MessageBox.Show("Google Chrome not found. Install Chrome or open the HTML file manually.",
 				"Chrome not found", MessageBoxButton.OK, MessageBoxImage.Information);
 			return;
 		}
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = chrome,
-			Arguments = "\"" + _v6Path + "\"",
+			Arguments = "\"" + _rightPath + "\"",
 			UseShellExecute = true
 		});
 	}

@@ -1,122 +1,89 @@
 ﻿<Window x:Class="LetterCompareApp.MainWindow"
-
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
-
         Title="Letter Compare — Edge (left) vs Chrome preview (right)"
-
-        Height="900" Width="1400" MinHeight="500" MinWidth="900"
+        Height="920" Width="1400" MinHeight="520" MinWidth="900"
         PreviewKeyDown="Window_PreviewKeyDown">
 
 	<DockPanel>
-
 		<Border DockPanel.Dock="Top" Background="#2d2d2d" Padding="8">
-
 			<StackPanel>
+				<Grid Margin="0,0,0,8">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="16"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Column="0" Text="Left:" Foreground="White" VerticalAlignment="Center" Margin="0,0,6,0"/>
+					<Button Grid.Column="1" Content="Browse…" Padding="8,2" Margin="0,0,6,0" Click="BrowseLeft_Click"/>
+					<TextBlock x:Name="LeftPathText" Grid.Column="2" Foreground="#b8d4f0" VerticalAlignment="Center"
+					           TextTrimming="CharacterEllipsis" ToolTip=""/>
+					<TextBlock Grid.Column="4" Text="Right:" Foreground="White" VerticalAlignment="Center" Margin="0,0,6,0"/>
+					<Button Grid.Column="5" Content="Browse…" Padding="8,2" Margin="0,0,6,0" Click="BrowseRight_Click"/>
+					<TextBlock x:Name="RightPathText" Grid.Column="6" Foreground="#f0d4b8" VerticalAlignment="Center"
+					           TextTrimming="CharacterEllipsis" ToolTip=""/>
+					<Button Grid.Column="7" Content="Swap" Padding="8,2" Click="Swap_Click"
+					        ToolTip="Swap left and right files"/>
+				</Grid>
 
 				<WrapPanel VerticalAlignment="Center">
-
 					<TextBlock Text="Scroll:" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
-
 					<RadioButton x:Name="ModeBoth" Content="Both together" GroupName="scroll" IsChecked="True"
-
 					             Foreground="White" Margin="0,0,12,0" Checked="ScrollMode_Changed"/>
-
-					<RadioButton x:Name="ModeV5" Content="V5 / Edge only" GroupName="scroll"
-
+					<RadioButton x:Name="ModeV5" Content="Left only" GroupName="scroll"
 					             Foreground="White" Margin="0,0,12,0" Checked="ScrollMode_Changed"/>
-
-					<RadioButton x:Name="ModeV6" Content="V6 only" GroupName="scroll"
-
+					<RadioButton x:Name="ModeV6" Content="Right only" GroupName="scroll"
 					             Foreground="White" Margin="0,0,12,0" Checked="ScrollMode_Changed"/>
-
 					<RadioButton x:Name="ModeIndep" Content="Independent" GroupName="scroll"
-
 					             Foreground="White" Margin="0,0,16,0" Checked="ScrollMode_Changed"/>
-
 					<Button Content="▲" Width="28" Margin="0,0,4,0" Click="ScrollUp_Click"/>
-
 					<Button Content="▼" Width="28" Margin="0,0,4,0" Click="ScrollDown_Click"/>
-
 					<Button Content="Top" Margin="0,0,4,0" Click="ScrollTop_Click"/>
-
 					<Button Content="Bottom" Margin="0,0,4,0" Click="ScrollBottom_Click"/>
-
 					<Button Content="Align" Margin="0,0,12,0" Click="Align_Click"/>
-
 					<TextBlock Text="Zoom:" Foreground="White" VerticalAlignment="Center" Margin="0,0,8,0"/>
-
 					<Button Content="−" Width="28" Margin="0,0,4,0" Click="ZoomOut_Click"
-					        ToolTip="Zoom out both panes (Ctrl + mouse wheel)"/>
-
+					        ToolTip="Zoom out (Ctrl + mouse wheel)"/>
 					<Button Content="+" Width="28" Margin="0,0,4,0" Click="ZoomIn_Click"
-					        ToolTip="Zoom in both panes (Ctrl + mouse wheel)"/>
-
+					        ToolTip="Zoom in (Ctrl + mouse wheel)"/>
 					<Button Content="100%" Margin="0,0,12,0" Click="ZoomReset_Click" ToolTip="Reset zoom to 100%"/>
-
 					<Button Content="Reload" Margin="0,0,8,0" Click="Reload_Click"/>
-
-					<Button Content="Open V6 in Chrome" Margin="0,0,8,0" Click="OpenInChrome_Click"
-
-					        ToolTip="Opens V6 in installed Google Chrome (real Chrome engine)"/>
-
+					<Button Content="Open right in Chrome" Margin="0,0,8,0" Click="OpenInChrome_Click"
+					        ToolTip="Opens the right-hand HTML file in installed Google Chrome"/>
 				</WrapPanel>
-
 				<TextBlock x:Name="StatusText" Foreground="#8bc78b" FontSize="11" Margin="0,6,0,0" TextWrapping="Wrap"/>
-
 			</StackPanel>
-
 		</Border>
 
 		<Grid>
-
 			<Grid.ColumnDefinitions>
-
 				<ColumnDefinition Width="*"/>
-
 				<ColumnDefinition Width="6"/>
-
 				<ColumnDefinition Width="*"/>
-
 			</Grid.ColumnDefinitions>
-
 			<DockPanel Grid.Column="0">
-
 				<Border DockPanel.Dock="Top" Background="#1a3a5c" Padding="6">
-
-					<TextBlock Text="LEFT — Microsoft Edge (WebView2)  ·  V5_LODI001A_IE.html"
-
+					<TextBlock x:Name="LeftHeaderText"
+					           Text="LEFT — Microsoft Edge (WebView2)"
 					           Foreground="#b8d4f0" FontWeight="SemiBold" HorizontalAlignment="Center"/>
-
 				</Border>
-
 				<wv2:WebView2 x:Name="EdgeView" PreviewMouseWheel="WebView_PreviewMouseWheel"/>
-
 			</DockPanel>
-
 			<GridSplitter Grid.Column="1" Width="6" HorizontalAlignment="Stretch" Background="#444"/>
-
 			<DockPanel Grid.Column="2">
-
 				<Border DockPanel.Dock="Top" Background="#3a2a1a" Padding="6">
-
-					<TextBlock Text="RIGHT — Chrome layout preview (WebView2 + Chrome user-agent)  ·  V6_LODI001A_CHROME.html"
-
+					<TextBlock x:Name="RightHeaderText"
+					           Text="RIGHT — Chrome layout preview (WebView2)"
 					           Foreground="#f0d4b8" FontWeight="SemiBold" HorizontalAlignment="Center" TextWrapping="Wrap"/>
-
 				</Border>
-
 				<wv2:WebView2 x:Name="ChromeView" PreviewMouseWheel="WebView_PreviewMouseWheel"/>
-
 			</DockPanel>
-
 		</Grid>
-
 	</DockPanel>
-
 </Window>
-
-
