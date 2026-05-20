@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V5 (IE) vs V6 (Chrome) — side-by-side compare</title>
+<style>
+* { box-sizing: border-box; }
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: Segoe UI, Arial, sans-serif;
+	background: #1e1e1e;
+	color: #e0e0e0;
+}
+.toolbar {
+	display: flex;
+	align-items: center;
+	gap: 10px 14px;
+	flex-wrap: wrap;
+	padding: 8px 12px;
+	background: #2d2d2d;
+	border-bottom: 1px solid #444;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.toolbar h1 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.toolbar-group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	font-size: 12px;
+}
+.toolbar-group.scroll-modes label {
+	cursor: pointer;
+	padding: 3px 8px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	user-select: none;
+}
+.toolbar-group.scroll-modes label:has(input:checked) {
+	background: #404040;
+	border-color: #666;
+}
+.toolbar-group.scroll-modes input { margin: 0 4px 0 0; vertical-align: middle; }
+.toolbar button {
+	font-size: 12px;
+	padding: 4px 10px;
+	cursor: pointer;
+	background: #3c3c3c;
+	color: #fff;
+	border: 1px solid #555;
+	border-radius: 4px;
+}
+.toolbar button:hover { background: #4a4a4a; }
+.toolbar button:disabled { opacity: 0.45; cursor: not-allowed; }
+.toolbar input[type="range"] { width: 90px; vertical-align: middle; }
+.toolbar .hint {
+	font-size: 11px;
+	color: #999;
+	width: 100%;
+	margin: 0;
+}
+.sync-status {
+	font-size: 11px;
+	color: #8bc78b;
+	white-space: nowrap;
+}
+.sync-status.warn { color: #e8b86a; }
+.panels {
+	display: flex;
+	height: calc(100vh - 72px);
+	position: relative;
+}
+.panel {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-width: 120px;
+	position: relative;
+}
+.panel-header {
+	padding: 6px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	flex-shrink: 0;
+	cursor: pointer;
+	border-bottom: 3px solid transparent;
+	transition: border-color 0.15s, filter 0.15s;
+}
+.panel-header:hover { filter: brightness(1.08); }
+.panel-header.v5 { background: #1a3a5c; color: #b8d4f0; }
+.panel-header.v6 { background: #3a2a1a; color: #f0d4b8; }
+.panel.active .panel-header.v5 { border-bottom-color: #6eb3ff; }
+.panel.active .panel-header.v6 { border-bottom-color: #ffb86e; }
+.panel.inactive-scroll .panel-header { opacity: 0.75; }
+.frame-wrap {
+	flex: 1;
+	position: relative;
+	min-height: 0;
+	background: #fff;
+}
+.panel iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+.scroll-blocker {
+	position: absolute;
+	inset: 0;
+	background: rgba(30, 30, 30, 0.35);
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+.scroll-blocker.visible { display: flex; }
+.scroll-blocker span {
+	background: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	padding: 8px 14px;
+	border-radius: 6px;
+	font-size: 12px;
+	pointer-events: none;
+}
+.divider {
+	width: 6px;
+	flex-shrink: 0;
+	background: #444;
+	cursor: col-resize;
+	position: relative;
+	z-index: 5;
+}
+.divider:hover, .divider.dragging { background: #6a9fd8; }
+@media (max-width: 900px) {
+	.panels { flex-direction: column; height: auto; min-height: calc(100vh - 72px); }
+	.panel { min-height: 45vh; }
+	.divider {
+		width: 100%;
+		height: 6px;
+		cursor: row-resize;
+	}
+	.toolbar .hint { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="toolbar">
+	<h1>Letter compare</h1>
+	<div class="toolbar-group scroll-modes">
+		<span>Scroll:</span>
+		<label><input type="radio" name="scrollMode" value="both" checked> Both together</label>
+		<label><input type="radio" name="scrollMode" value="v5"> V5 only</label>
+		<label><input type="radio" name="scrollMode" value="v6"> V6 only</label>
+		<label><input type="radio" name="scrollMode" value="independent"> Independent</label>
+	</div>
+	<div class="toolbar-group">
+		<button type="button" id="scrollTop" title="Scroll to top">Top</button>
+		<button type="button" id="scrollUp" title="Scroll up">▲</button>
+		<button type="button" id="scrollDown" title="Scroll down">▼</button>
+		<button type="button" id="scrollBottom" title="Scroll to bottom">Bottom</button>
+		<button type="button" id="alignNow" title="Match scroll position now">Align now</button>
+	</div>
+	<div class="toolbar-group">
+		<label>Zoom <input type="range" id="zoom" min="50" max="150" value="100"> <span id="zoomVal">100%</span></label>
+	</div>
+	<div class="toolbar-group">
+		<button type="button" id="reload">Reload both</button>
+		<button type="button" id="printBoth">Print preview</button>
+	</div>
+	<p class="hint">Use mouse wheel over a panel to scroll. Both together: wheel on either side moves both. V5/V6 only: grey overlay blocks the other side (click overlay or title to switch). Independent: each side scrolls separately. Toolbar ▲▼ also works.</p>
+	<span id="syncStatus" class="sync-status" aria-live="polite"></span>
+</div>
+<div class="panels" id="panels">
+	<div class="panel active" id="panelV5" data-panel="v5">
+		<div class="panel-header v5" id="headerV5">V5 — IE (click to scroll this side only)</div>
+		<div class="frame-wrap">
+			<iframe id="frameV5" title="V5 IE letter" src="V5_LODI001A_IE.html"></iframe>
+			<div class="scroll-blocker" id="blockerV5" data-target="v5"><span>Click to scroll V5 only</span></div>
+		</div>
+	</div>
+	<div class="divider" id="divider" title="Drag to resize"></div>
+	<div class="panel" id="panelV6" data-panel="v6">
+		<div class="panel-header v6" id="headerV6">V6 — Chrome (click to scroll this side only)</div>
+		<div class="frame-wrap">
+			<iframe id="frameV6" title="V6 Chrome letter" src="V6_LODI001A_CHROME.html"></iframe>
+			<div class="scroll-blocker" id="blockerV6" data-target="v6"><span>Click to scroll V6 only</span></div>
+		</div>
+	</div>
+</div>
+<script>
+(function () {
+	var zoom = document.getElementById('zoom');
+	var zoomVal = document.getElementById('zoomVal');
+	var f5 = document.getElementById('frameV5');
+	var f6 = document.getElementById('frameV6');
+	var panelV5 = document.getElementById('panelV5');
+	var panelV6 = document.getElementById('panelV6');
+	var blockerV5 = document.getElementById('blockerV5');
+	var blockerV6 = document.getElementById('blockerV6');
+	var divider = document.getElementById('divider');
+	var syncStatus = document.getElementById('syncStatus');
+	var locking = false;
+	var ready = { v5: false, v6: false };
+
+	function getMode() {
+		var r = document.querySelector('input[name="scrollMode"]:checked');
+		return r ? r.value : 'both';
+	}
+
+	function frameWin(frame) {
+		try { return frame.contentWindow; } catch (e) { return null; }
+	}
+
+	function scrollInfo(win) {
+		if (!win) return { top: 0, max: 0, ratio: 0 };
+		try {
+			var doc = win.document;
+			var el = doc.scrollingElement || doc.documentElement || doc.body;
+			var h = Math.max(el.scrollHeight, doc.body.scrollHeight, doc.documentElement.scrollHeight);
+			var ch = win.innerHeight || el.clientHeight;
+			var max = Math.max(0, h - ch);
+			var top = win.pageYOffset || el.scrollTop || doc.body.scrollTop || 0;
+			return { top: top, max: max, ratio: max ? top / max : 0 };
+		} catch (e) {
+			return { top: 0, max: 0, ratio: 0 };
+		}
+	}
+
+	function setScrollTop(win, top) {
+		if (!win) return;
+		try {
+			var doc = win.document;
+			var el = doc.scrollingElement || doc.documentElement || doc.body;
+			var max = scrollInfo(win).max;
+			top = Math.max(0, Math.min(max, top));
+			win.scrollTo(0, top);
+			el.scrollTop = top;
+			doc.body.scrollTop = top;
+		} catch (e) { }
+	}
+
+	function scrollToRatio(win, ratio) {
+		setScrollTop(win, scrollInfo(win).max * ratio);
+	}
+
+	function scrollByDeltaOnFrames(frames, delta) {
+		locking = true;
+		frames.forEach(function (fr) {
+			var w = frameWin(fr);
+			if (!w) return;
+			var i = scrollInfo(w);
+			setScrollTop(w, i.top + delta);
+		});
+		locking = false;
+		updateSyncStatus();
+	}
+
+	function syncBothToLeader(leaderFrame) {
+		var w = frameWin(leaderFrame);
+		if (!w) return;
+		var ratio = scrollInfo(w).ratio;
+		locking = true;
+		[f5, f6].forEach(function (fr) {
+			if (fr !== leaderFrame) scrollToRatio(frameWin(fr), ratio);
+		});
+		locking = false;
+	}
+
+	function targetsForWheel(panel) {
+		var mode = getMode();
+		if (mode === 'independent') return null;
+		if (mode === 'both') return [f5, f6];
+		if (mode === 'v5' && panel === 'v5') return [f5];
+		if (mode === 'v6' && panel === 'v6') return [f6];
+		return null;
+	}
+
+	function handleWheel(panel, deltaY) {
+		var targets = targetsForWheel(panel);
+		if (!targets) return;
+		scrollByDeltaOnFrames(targets, deltaY);
+	}
+
+	function handleScroll(panel) {
+		if (locking) return;
+		var mode = getMode();
+		if (mode !== 'both') return;
+		var leader = panel === 'v5' ? f5 : f6;
+		syncBothToLeader(leader);
+		updateSyncStatus();
+	}
+
+	function injectBridge(frame, panel) {
+		try {
+			var doc = frame.contentDocument;
+			if (!doc || doc.getElementById('compare-bridge')) return;
+			var s = doc.createElement('script');
+			s.id = 'compare-bridge';
+			s.textContent = [
+				'(function(){',
+				'var P="' + panel + '";',
+				'var mode="both";',
+				'window.addEventListener("message",function(e){',
+				'if(e.data&&e.data.type==="compare-mode")mode=e.data.mode;',
+				'});',
+				'window.addEventListener("wheel",function(e){',
+				'if(mode==="independent")return;',
+				'var t=(mode==="both")||(mode==="v5"&&P==="v5")||(mode==="v6"&&P==="v6");',
+				'if(!t)return;',
+				'e.preventDefault();',
+				'e.stopPropagation();',
+				'parent.postMessage({type:"compare-wheel",panel:P,deltaY:e.deltaY},"*");',
+				'},{passive:false,capture:true});',
+				'var onScr=function(){',
+				'if(mode!=="both")return;',
+				'parent.postMessage({type:"compare-scroll",panel:P},"*");',
+				'};',
+				'window.addEventListener("scroll",onScr,{passive:true});',
+				'document.addEventListener("scroll",onScr,{passive:true});',
+				'})();'
+			].join('');
+			(doc.body || doc.documentElement).appendChild(s);
+		} catch (e) {
+			syncStatus.textContent = 'Cannot access iframes — open compare file from same folder as letters';
+			syncStatus.className = 'sync-status warn';
+		}
+	}
+
+	function broadcastMode() {
+		var mode = getMode();
+		[f5, f6].forEach(function (fr) {
+			try { fr.contentWindow.postMessage({ type: 'compare-mode', mode: mode }, '*'); } catch (e) { }
+		});
+	}
+
+	function updateSyncStatus() {
+		if (!syncStatus) return;
+		var labels = { both: 'Both together', v5: 'V5 only', v6: 'V6 only', independent: 'Independent' };
+		var mode = getMode();
+		try {
+			var r5 = Math.round(scrollInfo(frameWin(f5)).ratio * 100);
+			var r6 = Math.round(scrollInfo(frameWin(f6)).ratio * 100);
+			syncStatus.textContent = 'Mode: ' + labels[mode] + ' | V5 ' + r5 + '% | V6 ' + r6 + '%';
+			syncStatus.className = 'sync-status';
+		} catch (e) {
+			syncStatus.textContent = 'Mode: ' + labels[mode];
+		}
+	}
+
+	function updateUI() {
+		var mode = getMode();
+		blockerV5.classList.toggle('visible', mode === 'v6');
+		blockerV6.classList.toggle('visible', mode === 'v5');
+		panelV5.classList.toggle('inactive-scroll', mode === 'v6');
+		panelV6.classList.toggle('inactive-scroll', mode === 'v5');
+		panelV5.classList.toggle('active', mode === 'both' || mode === 'v5' || mode === 'independent');
+		panelV6.classList.toggle('active', mode === 'both' || mode === 'v6' || mode === 'independent');
+		broadcastMode();
+		updateSyncStatus();
+	}
+
+	function setMode(mode) {
+		var radio = document.querySelector('input[name="scrollMode"][value="' + mode + '"]');
+		if (radio) radio.checked = true;
+		updateUI();
+	}
+
+	function applyZoom(pct) {
+		var s = pct / 100;
+		[f5, f6].forEach(function (fr) {
+			try {
+				var doc = fr.contentDocument;
+				if (!doc || !doc.body) return;
+				doc.body.style.zoom = s;
+				doc.documentElement.style.zoom = s;
+			} catch (e) { }
+		});
+		zoomVal.textContent = pct + '%';
+	}
+
+	function getActiveFrames() {
+		var mode = getMode();
+		if (mode === 'v5') return [f5];
+		if (mode === 'v6') return [f6];
+		return [f5, f6];
+	}
+
+	function onFrameLoad(frame, panel) {
+		ready[panel] = true;
+		injectBridge(frame, panel);
+		applyZoom(Number(zoom.value));
+		if (ready.v5 && ready.v6) updateUI();
+	}
+
+	window.addEventListener('message', function (e) {
+		if (!e.data) return;
+		if (e.data.type === 'compare-wheel') {
+			handleWheel(e.data.panel, e.data.deltaY);
+		} else if (e.data.type === 'compare-scroll') {
+			handleScroll(e.data.panel);
+		}
+	});
+
+	f5.addEventListener('load', function () { onFrameLoad(f5, 'v5'); });
+	f6.addEventListener('load', function () { onFrameLoad(f6, 'v6'); });
+
+	document.querySelectorAll('input[name="scrollMode"]').forEach(function (radio) {
+		radio.addEventListener('change', updateUI);
+	});
+
+	blockerV5.addEventListener('click', function () { setMode('v5'); });
+	blockerV6.addEventListener('click', function () { setMode('v6'); });
+	document.getElementById('headerV5').addEventListener('click', function () { setMode('v5'); });
+	document.getElementById('headerV6').addEventListener('click', function () { setMode('v6'); });
+
+	document.getElementById('scrollTop').addEventListener('click', function () {
+		locking = true;
+		getActiveFrames().forEach(function (fr) { setScrollTop(frameWin(fr), 0); });
+		locking = false;
+		updateSyncStatus();
+	});
+
+	document.getElementById('scrollBottom').addEventListener('click', function () {
+		locking = true;
+		getActiveFrames().forEach(function (fr) { scrollToRatio(frameWin(fr), 1); });
+		locking = false;
+		updateSyncStatus();
+	});
+
+	document.getElementById('scrollUp').addEventListener('click', function () {
+		scrollByDeltaOnFrames(getActiveFrames(), -80);
+	});
+
+	document.getElementById('scrollDown').addEventListener('click', function () {
+		scrollByDeltaOnFrames(getActiveFrames(), 80);
+	});
+
+	document.getElementById('alignNow').addEventListener('click', function () {
+		syncBothToLeader(f5);
+		updateSyncStatus();
+	});
+
+	zoom.addEventListener('input', function () { applyZoom(Number(zoom.value)); });
+
+	document.getElementById('reload').addEventListener('click', function () {
+		ready.v5 = false;
+		ready.v6 = false;
+		f5.src = f5.src.split('#')[0];
+		f6.src = f6.src.split('#')[0];
+	});
+
+	document.getElementById('printBoth').addEventListener('click', function () {
+		window.open('V5_LODI001A_IE.html', '_blank');
+		window.open('V6_LODI001A_CHROME.html', '_blank');
+	});
+
+	var dragging = false;
+	divider.addEventListener('mousedown', function (e) {
+		dragging = true;
+		divider.classList.add('dragging');
+		e.preventDefault();
+	});
+	window.addEventListener('mousemove', function (e) {
+		if (!dragging) return;
+		var rect = document.getElementById('panels').getBoundingClientRect();
+		var pct = window.innerWidth <= 900
+			? ((e.clientY - rect.top) / rect.height) * 100
+			: ((e.clientX - rect.left) / rect.width) * 100;
+		pct = Math.min(80, Math.max(20, pct));
+		panelV5.style.flex = '0 0 ' + pct + '%';
+		panelV6.style.flex = '1 1 auto';
+	});
+	window.addEventListener('mouseup', function () {
+		dragging = false;
+		divider.classList.remove('dragging');
+	});
+	divider.addEventListener('dblclick', function () {
+		panelV5.style.flex = '1';
+		panelV6.style.flex = '1';
+	});
+
+	document.addEventListener('keydown', function (e) {
+		if (e.target.tagName === 'INPUT') return;
+		if (e.key === 'Home') { document.getElementById('scrollTop').click(); e.preventDefault(); }
+		if (e.key === 'End') { document.getElementById('scrollBottom').click(); e.preventDefault(); }
+		if (e.key === 'ArrowUp') { document.getElementById('scrollUp').click(); e.preventDefault(); }
+		if (e.key === 'ArrowDown') { document.getElementById('scrollDown').click(); e.preventDefault(); }
+		if (e.key === '1') setMode('both');
+		if (e.key === '2') setMode('v5');
+		if (e.key === '3') setMode('v6');
+		if (e.key === '4') setMode('independent');
+	});
+
+	updateUI();
+})();
+</script>
+</body>
+</html>
