@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="orientation" content="1">
+    <title>&nbsp;</title>
+
+
+    <style>
+        <!--
+        body {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 9pt
+        }
+
+        td {
+            font-family: "Arial", "Helvetica", "sans-serif";
+            font-size: 9pt
+        }
+
+        DIV.page {
+            page-break-before: always
+        }
+
+        p.pageBreak {
+            page-break-after: always;
+        }
+
+        -->
+    </style>
+    <script>
+        var totalAmount = 0;
+
+        function parseToCurrencyNormal(sCurrency) {
+
+            var sCurr = sCurrency + "";
+            if (isNaN(parseFloat(sCurr)))
+                return "$0.00";
+            // round up sCurrency at the third bit
+            var dCurr = parseFloat(sCurr) + 0.005;
+            sCurr = "" + dCurr;
+            var sCurrList = sCurr.split(".");
+            var sInteger = sCurrList[0];
+            var sFloat = "00";
+            if (sCurr.indexOf(".") > -1)
+                sFloat = sCurrList[1];
+            var sCurrInt = "";
+            for (i = 0; i < sInteger.length; i++) {
+                if (i != 0 && i % 3 == 0) {
+                    sCurrInt = ",".concat(sCurrInt);
+                }
+                sCurrInt = sInteger.charAt(sInteger.length - 1 - i).concat(sCurrInt);
+            }
+            if (sFloat.length < 2) sFloat = sFloat + "0";
+            sFloat = sFloat.substring(0, 2);
+            sCurrInt = "$" + sCurrInt.concat(".");
+            return sCurrInt.concat(sFloat);
+        }
+    </script>
+</head>
+<body style="background-color: #FFFFFF; color: #000000;">
+<p>
+    &nbsp;
+</p>
+
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title>&nbsp;</title>
+</head>
+
+<body>
+<table style="width: 90%; border-spacing: 0px; margin: 0 auto;" bordercolordark="#FFFFFF"
+       bordercolorlight="#C0C0C0">
+    <tr style="vertical-align: top;">
+        <td style="width: 25%; vertical-align: top;">
+            REPORT ID : RORC004O
+        </td>
+        <td style="text-align: center; width: 50%;">
+            VALID IV VEHICLES & DRIVERS LICENSING INTEGRATED DATA SYSTEM
+        </td>
+        <td style="width: 15%;">
+            RUNDATE
+        </td>
+        <td style="width: 10%;">
+
+            11/06/2026
+
+        </td>
+    </tr>
+    <tr style="vertical-align: top;">
+        <td>
+            SEQ :
+        </td>
+        <td style="text-align: center;">
+            REVERT PAYMENT TRANSACTION LOG
+        </td>
+        <td>
+            PAGE
+        </td>
+        <td>
+            1
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+<br>
+<br>
+<table style="width: 90%; border-spacing: 0px; margin: 0 auto;" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0">
+    <tr>
+
+
+        <td style="vertical-align: top;">
+            USER ID:
+        </td>
+        <td style="vertical-align: top;">
+            TEHALL
+        </td>
+        <td style="vertical-align: top;">
+        </td>
+        <td style="vertical-align: top;">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td style="vertical-align: top;">
+            PAYMENT METHOD:
+        </td>
+        <td>
+            <table style="border-spacing: 0px; width: 90%;">
+                <tr>
+                    <td>
+                        EPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                    </td>
+                    <td style="text-align: right;">
+                        $0.00
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        FPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                    </td>
+                    <td style="text-align: right;">
+                        $0.00
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                    </td>
+                    <td style="text-align: right;">
+                        $60.00
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cheque&nbsp;-
+                    </td>
+                    <td style="text-align: right;">
+                        $0.00
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Over Collection&nbsp;-
+                    </td>
+                    <td style="text-align: right;">
+                        $0.00
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table style="border-spacing: 0px;">
+                <tr>
+                    <td>
+                        LOCATION:
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        DATE / TIME:
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        AUTHORIZED BY:
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table style="border-spacing: 0px;">
+                <tr>
+                    <td>
+                        A01
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        11/06/2026 16:14:37
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        TEHALL
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+
+
+<table style="width: 90%; border-spacing: 0px; margin: 0 auto;" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0">
+
+
+    <tr style="vertical-align: top;">
+        <td>
+            Reference
+        </td>
+        <td>
+            Transaction NO.
+        </td>
+        <td>
+            Original Receipt NO.
+        </td>
+        <td>
+            Reverted Receipt NO.
+        </td>
+        <td>
+            Transaction Type
+        </td>
+        <td>
+            Amount
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6"><br></td>
+    </tr>
+
+
+    <script>
+        totalAmount = totalAmount + 1 * 60.00;
+    </script>
+    <tr>
+        <td>
+
+            WG4512($)
+
+        </td>
+        <td>
+
+            A01-0157
+
+        </td>
+        <td>
+
+
+            27
+
+
+        </td>
+        <td>
+
+
+            28
+
+
+        </td>
+        <td>
+
+            • DUPLICATE VEH LIC
+
+
+        </td>
+        <td style="text-align: right;">
+
+            $60.00
+        </td>
+    </tr>
+
+
+</table>
+<table style="width: 90%; border-spacing: 0px; margin: 0 auto;" bordercolordark="#FFFFFF" bordercolorlight="#C0C0C0">
+    <tr style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td colspan="2" style="width: 75%;"></td>
+        <td>
+            TOTAL:&nbsp;&nbsp;
+        </td>
+        <td style="text-align: right;" id="td_total_amount">
+
+            $60.00
+
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<table style="width: 100%; border-spacing: 0px; margin: 0 auto;">
+    <tr>
+        <td style="text-align: center;">
+            *** END OF REPORT ***
+        </td>
+    </tr>
+</table>
+</body>
+</html>

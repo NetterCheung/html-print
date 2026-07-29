@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<APPaymentOutboundInterfaceFile xmlns="http://valid.gov.hk/gfmis/xbean/paymentInfo.xsd">
+    <PaymentBatch PaymentDate="11/06/2026" PaymentRunDate="11/06/2026" PaymentBatchName="BATCH001">
+        <Payment RANumber="RA001" DocumentNumber="DOC001" CustRefNumber="CR12345">
+            <Invoice DVN="PV000001"
+                     SupplierNumber="SUP001"
+                     IDRefType="H"
+                     IDReference="A1234567"
+                     PayeeName="John Doe"
+                     PaymentMethod="C"
+                     PayGroup="G01"
+                     ChequeNumber="CHQ001"
+                     InvoiceAmount="500.00"
+                     InvoiceCreationDate="11/06/2026"
+                     InvoicePreparer="Admin"
+                     InvoiceFirstApprovalDate="11/06/2026 10:00:00"
+                     InvoiceFirstApprover="Manager A"
+                     InvoiceSecondApprovalDate="11/06/2026 14:00:00"
+                     InvoiceSecondApprover="Manager B"
+                     InvoiceNumber="INV000001"
+                     InvoiceDescription="Test payment"/>
+            <Invoice DVN="PV000002"
+                     SupplierNumber="SUP002"
+                     IDRefType="H"
+                     IDReference="B7654321"
+                     PayeeName="Jane Smith"
+                     PaymentMethod="C"
+                     PayGroup="G01"
+                     ChequeNumber="CHQ002"
+                     InvoiceAmount="250.50"
+                     InvoiceCreationDate="11/06/2026"
+                     InvoicePreparer="Admin"
+                     InvoiceFirstApprovalDate="11/06/2026 10:00:00"
+                     InvoiceFirstApprover="Manager A"
+                     InvoiceSecondApprovalDate="11/06/2026 14:00:00"
+                     InvoiceSecondApprover="Manager B"
+                     InvoiceNumber="INV000002"/>
+        </Payment>
+    </PaymentBatch>
+</APPaymentOutboundInterfaceFile>

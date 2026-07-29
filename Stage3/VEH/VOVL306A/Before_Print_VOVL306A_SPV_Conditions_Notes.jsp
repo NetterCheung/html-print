@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c"%>
+<%@ taglib uri="/WEB-INF/tld/fmt.tld" prefix="fmt"%>
+<%@ taglib uri="/WEB-INF/tld/tdcustom.tld" prefix="print"%>
+<!--CR-2013-019
+@Report ID: VOVL306A
+@Report Name: Annex I - SPV Conditions Notes
+@Created on Sept 2013
+-->
+
+<html lang="en">
+<head>
+<!-- saved from url=(0014)about:internet -->
+<meta charset="UTF-8">
+<meta name="margin-top" content="2">
+<meta name="margin-bottom" content="2">
+<meta name="margin-left" content="2">
+<meta name="margin-right" content="2">
+<meta name="copies" content="1">				<!--打印份数(默认值:1)-->
+<meta name="papersize" content="A4">			<!--纸张大小(默认值:A4)-->
+<meta name="orientation" content="0">			<!--打印方向(默认值:0  参数说明:0-纵向 ; 1-横向)-->
+<meta name="duplex" content="2">				<!--是否双面(默认值:0 参数说明:0-无 ; 1- 短边翻转; 2-长边翻转)-->
+<title>&nbsp;</title>
+<STYLE>
+td {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12pt;
+}
+
+.chi {font-size: 12pt;
+         font-family:"MingLiU_HKSCS";}
+.headingEng {
+	font-size: 16pt;
+	font-weight:bold;
+    font-family:"Times New Roman";}
+.headingChi {
+	font-size: 16pt;
+	font-weight:bold;
+	font-family:"MingLiU_HKSCS";}
+.footerChi {font-size: 10pt;
+	font-family:"MingLiU_HKSCS";}
+.footerEng {font-size: 10pt;
+	font-family:"Arial";}
+.win10_bold {
+	font-family:"MingLiU";
+	font-weight:bold;
+}
+</STYLE>
+</head>
+<body>
+
+<table style="width: 620px; border-spacing: 0px; margin: 0 auto;">
+<tr>
+	<td>
+		<table style="width: 100%; border-spacing: 1px; margin: 0 auto;">
+			<tr style="text-align: left;">
+          		<td style="padding: 2px;"><img src="<print:BlankFormPrint imageName='logo.gif'/>" alt=""></td>
+        	</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table style="width: 100%; border-spacing: 1px; margin: 0 auto;">
+		 <tr style="display: none;"><th>col1</th><th>col2</th><th>col3</th><th>col4</th></tr>
+		 <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+        <tr style="text-align: center;"><td colspan="4" class="headingEng" style="padding: 2px;"><u>Special Purpose Vehicle Conditions of Licence</u></td></tr>
+		<tr style="text-align: center;"><td colspan="4" style="padding: 2px;"><i> (Applicable to special purpose vehicle other than forklift truck, 
+<br>industrial tractor or industrial tractor (refuse collection))
+</i></td></tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+        <tr style="text-align: left;"> 
+		  <td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">1.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;">
+		  Driver driving a special purpose vehicle shall possess a valid full driving licence with driving entitlement "Special Purpose Vehicle" (vehicle class 21), and has obtained the approval from the Transport Department for driving that special purpose vehicle;
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+		<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">2.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;">
+		Vehicle owner needs to acquire sufficient and appropriate amount of third party risks insurance for the equipment installed on the special purpose vehicle and operation of such equipment.  Such policy of insurance shall be a policy issued by an authorised insurer that is defined under Motor Vehicles Insurance (Third Party Risks) Ordinance (Cap. 272)  <b>(applicable to vehicle licence issued on or after 1 November 2013)</b>；
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+		 <td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">3.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;">
+		  No person shall drive or use a special purpose vehicle on an expressway, unless the Transport Department has issued an "Expressway Permit" under regulation 50A of the Road Traffic (Registration and Licensing of Vehicles) Regulations (Cap. 374E) for that special purpose vehicle (not applicable to those exempted under regulations 23 or 24 of the Road Traffic (Expressway) Regulations (Cap. 374Q));
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+			<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">4.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;">
+		 Vehicle licence must be shown on the vehicle, and driver of the special purpose vehicle must bring along the original of this document when driving, and produce it to police officer for inspection as and when required.
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>     
+        <tr> 
+          <td colspan="4" style="text-align: right; padding: 2px;">
+          	<table style="border-spacing: 0px; width: 40%;">
+          	  <tr>
+          	  	<td style="text-align: center;">
+          	  	  Licensing Section &nbsp;<br>
+				Transport Department<br><br>
+          	  	  
+          		</td>
+          	  </tr>
+          	</table>
+          </td>
+        </tr>
+       
+	  
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   
+	   
+		<tr style="text-align: center;"> 
+          <td colspan="4" class="footerChi" style="padding: 2px;">牌照事務組</td>
+        </tr>
+
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">Licensing Section</td>
+        </tr>
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerChi" style="padding: 2px;">香港金鐘道九十五號統一中心三樓</td>
+        </tr>
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">3rd Floor   United Centre   95 Queensway   Hong Kong</td>
+        </tr>
+		<tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">網址 Web Site: http://www.td.gov.hk</td>
+        </tr>
+      </table>
+	</td>
+</tr>
+</table>
+
+<DIV id="first_page" style="PAGE-BREAK-BEFORE: always">
+</DIV>
+
+<DIV id="page_last" style="PAGE-BREAK-AFTER: auto">
+<!-- print on another page -->
+<table style="width: 620px; border-spacing: 0px; margin: 0 auto;">
+<tr>
+	<td>
+		<table style="width: 100%; border-spacing: 1px; margin: 0 auto;">
+			<tr style="text-align: left;">
+          		<td style="padding: 2px;"><img src="<print:BlankFormPrint imageName='logo.gif'/>" alt=""></td>
+        	</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td>
+		<table style="width: 100%; border-spacing: 1px; margin: 0 auto;">
+        <tr style="display: none;"><th>col1</th><th>col2</th><th>col3</th><th>col4</th></tr>
+        <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: center;"><td colspan="4" class="headingChi" style="padding: 2px;"><u><span class="win10_bold">特別用途車輛的發牌條件</span></u></td></tr>
+		<tr style="text-align: center;"><td colspan="4" class="chi" style="padding: 2px;"><i> (適用於叉式剷車、工業用拖拉機或工業用拖拉機 (廢物收集)以外<br>
+		的所有特別用途車輛)
+		</i></td></tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+        <tr style="text-align: left;"> 
+		<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">1.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;" class="chi">
+		  駕駛特別用途車輛的司機必須擁有香港正式駕駛執照「特別用途車輛」的駕駛資格(車輛類別代號21)，並已獲運輸署書面批准該司機駕駛該輛特別用途車輛；
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+		<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">2.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;" class="chi">
+		車主必須為特別用途車輛上的裝設的設備及其操作購買足夠及合適的第三者保險，而該保險單應由按《汽車保險(第三者風險)條例》(香港法例第272章)定義的獲授權保險人發出 <span class="win10_bold">(適用於在2013年11月1日或之後發出的車輛牌照)</span>；
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+		<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">3.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;" class="chi">
+		  任何人不得在快速公路上駕駛或使用特別用途車輛，除非該車輛已獲運輸署根據《道路交通(車輛登記及領牌)規則》(香港法例第374E章)第50A條發出「快速道路許可證」(獲《道路交通(快速道路)規則》(香港法例第374Q章)第23或第24條豁免者除外)；
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr style="text-align: left;"> 
+		<td style="width: 10px; padding: 2px;">&nbsp;</td>
+		  <td style="width: 25px; vertical-align: top; padding: 2px;">4.</td>
+          <td colspan="2" style="padding: 2px;">
+		  <div style="text-align: justify;" class="chi">
+		  必須在車輛上展示車輛牌照，而司機在駕駛該車輛時需攜帶本文件(正本)，以便在有需要時供警務人員查閱。
+		  </div>
+		  </td>
+        </tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+		<tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>     
+        <tr> 
+          <td colspan="4" style="text-align: right; padding: 2px;">
+          	<table style="border-spacing: 0px; width: 40%;">
+          	  <tr>
+          	  	<td class="chi" style="text-align: center;">
+          	  	  運輸署牌照事務組<br><br>
+          	  	  
+          		</td>
+          	  </tr>
+          	</table>
+          </td>
+        </tr>
+       
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+	   <tr><td colspan="4" style="padding: 2px;">&nbsp;</td></tr>
+
+	   
+		<tr style="text-align: center;"> 
+          <td colspan="4" class="footerChi" style="padding: 2px;">牌照事務組</td>
+        </tr>
+
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">Licensing Section</td>
+        </tr>
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerChi" style="padding: 2px;">香港金鐘道九十五號統一中心三樓</td>
+        </tr>
+        <tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">3rd Floor   United Centre   95 Queensway   Hong Kong</td>
+        </tr>
+		<tr style="text-align: center;"> 
+          <td colspan="4" class="footerEng" style="padding: 2px;">網址 Web Site: http://www.td.gov.hk</td>
+        </tr>
+        
+      </table>
+	</td>
+</tr>
+</table>
+</DIV>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by DongJY (HPSidc) --><document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backpaper="1" bold="0" bottom="16216" color="0000FF" doubleprint="0" font="FontA11" italic="0" left="0" name="preprint sample" orientation="0" printer="EPSON TM-H5000II Slip" right="11340" size="9" top="0" type="preprint" underline="0" xsi:noNamespaceSchemaLocation="preprint.xsd">
+	<page color="000000" number="0" size="9">
+		<entry key="txnNo" predefined="0" value="A01-0026" x="0" y="0"/>
+		<entry indent="2" key="txnDate" predefined="0" value="29/06/2026" x="1100" y="0"/>
+		<entry key="txnDateTime" predefined="0" value="16:44:00" x="2700" y="0"/>
+		<entry key="operatorId" predefined="0" value="ALL" x="3850" y="0"/>
+		<entry key="vehId" predefined="0" value="3266712" x="5100" y="0"/>
+		<entry key="regMark" predefined="0" value="WS8473" x="0" y="230"/>
+		<entry key="permitNo" predefined="0" value="" x="1100" y="230"/>
+		<entry key="idNo" predefined="0" value="HKID-D4520476" x="2700" y="230"/>
+		<entry key="startDate" predefined="0" value="" x="3850" y="230"/>
+		<entry key="uptoDate" predefined="0" value="" x="5100" y="230"/>
+		<entry key="line" predefined="0" value="--------------------------------------------------------------" x="0" y="400"/>
+	</page>
+</document>
