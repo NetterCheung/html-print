@@ -607,7 +607,7 @@ p, div, span, td {
 		    		</td>
 		  		</tr>
 				<tr>
-					<td style="width: 15px;"></td>
+					<td style="width: 8px;"></td>
 					<td style="width: 345px;">
 						<div style="text-align: justify; text-justify: distribute-all-lines; layout-grid-mode: char">
 							<span
