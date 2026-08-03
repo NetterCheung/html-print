@@ -58,7 +58,7 @@ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
  /* Page Definitions */
  @page Section1
 	{size:595.3pt 841.9pt;
-	margin:22.7pt 46.3pt 22.7pt 36pt;
+	margin:30pt 50pt 30pt 50pt;
 	layout-grid:16pt;}
 div.Section1
 	{page:Section1;}
@@ -68,10 +68,23 @@ div.Section1
 ul
 	{margin-bottom:0cm;}
 div.page
-	{margin-left:15pt; margin-top:0pt;}
+	{margin-left:15pt; margin-top:0pt;padding: 20pt 10pt 40pt 35pt;box-sizing: border-box}
 div.firstpage
-	{margin-left:15pt; margin-top:0pt;}
+	{margin-left:15pt; margin-top:0pt;padding: 20pt 10pt 20pt 10pt;box-sizing: border-box}
 -->
+p {
+ margin-top: auto;
+ margin-bottom: auto;
+}
+.win10_bold {
+ font-family: "MingLiU_HKSCS";
+ font-weight: bold;
+ -webkit-text-stroke: 0.3px;
+}
+#AutoNumber1 p, #AutoNumber2 p {
+ margin: 0;
+ line-height: 1.2;
+}
 </style>
 
 </head>
@@ -86,7 +99,7 @@ div.firstpage
 <c:set var="countNo" value="1" />
 <body lang=ZH-CN style='text-justify-trim:punctuation'>
 <div class= firstpage>
-<table style="margin: 0 auto; width: 670px;">
+<table style="margin: -0.5cm auto 0; width: 670px;">
   <tr style="display: none;"><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
  <tr>
  <td style="text-align: center;">
@@ -98,16 +111,16 @@ div.firstpage
  </tr>
  <tr>
   <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>香港特別行政區政府運輸署</span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><span class="win10_bold"><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>香港特別行政區政府運輸署</span></span></p>
   <h1><span lang=EN-US style='font-size:11pt'>TRANSPORT DEPARTMENT</span></h1>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:11pt'>THE GOVERNMENT OF THE </span></b><b><span lang=EN-US style='font-size:11pt'>HONG KONG</span></b><b><span lang=EN-US style='font-size:11pt'> SPECIAL ADMINISTRATIVE REGION</span></b></p>
   <p class=MsoNormal style='layout-grid-mode:char'><b><span lang=EN-US style='font-size:11pt'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>香港法例第</span></b><b><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>374</span></b><b><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>章道路交通</span></b><b><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>(</span></b><b><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>車輛登記及領牌</span></b><b><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>)</span></b><b><span lang=ZH-TW style='font-size:11pt;
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><span class="win10_bold"><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>香港法例第</span></span><span class="win10_bold"><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>374</span></span><span class="win10_bold"><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>章道路交通</span></span><b><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>(</span></b><span class="win10_bold"><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>車輛登記及領牌</span></span><span class="win10_bold"><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>)</span></span><b><span lang=ZH-TW style='font-size:11pt;
   font-family:PMingLiU;letter-spacing:0pt'>規例</span></b></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:11pt'>ROAD TRAFFIC (REGISTRATION
   &amp; LICENSING OF VEHICLES) REGULATIONS (CAP. 374)</span></b></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:11pt'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>老爺車行駛許可證<c:set var="PERMITDUP"><%=RequestConstant.PERMIT_PRINT_STATUS_DUPLICATE%></c:set><c:if test="${movClassCarPermitPrint.permitStatus == PERMITDUP}">複本</c:if></span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><span class="win10_bold"><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU;letter-spacing:0pt'>老爺車行駛許可證<c:set var="PERMITDUP"><%=RequestConstant.PERMIT_PRINT_STATUS_DUPLICATE%></c:set><c:if test="${movClassCarPermitPrint.permitStatus == PERMITDUP}">複本</c:if></span></span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:11pt;letter-spacing:0pt'>  
   <c:if test="${movClassCarPermitPrint.permitStatus == PERMITDUP}">
   DUPLICATE
@@ -116,7 +129,7 @@ div.firstpage
   </td>
  </tr>
  <tr><td style="width: 50px;">&nbsp;</td><td style="width: 20px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td><td style="width: 50px;">&nbsp;</td></tr>
- <tr>
+ <tr style="transform: translateY(-0.2cm);">
   <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='margin-left:54pt;text-align:justify;text-justify:distribute-all-lines;layout-grid-mode:char'><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>根&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;據&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;規&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-size:10pt;text-justify:justify;letter-spacing:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>&nbsp;&nbsp;&nbsp;&nbsp;條&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;規&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定&nbsp;&nbsp;&nbsp;，&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
   <p class=MsoNormal style='margin-left:54pt;text-align:justify;text-justify:
@@ -126,14 +139,14 @@ div.firstpage
  </tr>
  <tr>
  	<td colspan=14 style="text-align: left;">
- 		<table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 640px;'>
+ 		<table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 640px;margin-top: -0.3cm;'>
  			<tr>
 		  <td style='vertical-align: top; width: 120px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm; height: 77px;'>
 		  <p class=MsoNormal style='layout-grid-mode:char'><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>(車主姓名)</span><br><span lang=EN-US style='font-size:10pt'>(Name of Owner)</span></p>
 		  </td>
 		  <td  style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-		  <p class=MsoNormal style='layout-grid-mode:char'><b><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;color:black;letter-spacing:0pt;word-break:normal;word-wrap:normal'>
-			  <c:out value="${movClassCarPermitPrint.nameChi}"/></span></b>
+		  <p class=MsoNormal style='layout-grid-mode:char'><span class="win10_bold"><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;color:black;letter-spacing:0pt;word-break:normal;word-wrap:normal'>
+			  <c:out value="${movClassCarPermitPrint.nameChi}"/></span></span>
 			  <br>
 			  <b><span lang=EN-US style='font-size:10pt;font-family:Courier New;color:black;word-break:normal;word-wrap:normal'>	    
 				<c:out value="${movClassCarPermitPrint.nameEng}"/>
@@ -189,7 +202,7 @@ div.firstpage
   <td colspan=2 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU'>(地址)</span></p>
   </td>
-  <td colspan=12 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
+  <td colspan=12 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;text-align: left;'>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:Courier New;font-size:12pt;color:black'><c:out value="${movClassCarPermitPrint.address1}"/></span></b></p>
   </td>
  </tr>
@@ -197,7 +210,7 @@ div.firstpage
   <td colspan=2 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal><span lang=EN-US style='font-size:10pt'>(Address)</span></p>
   </td>
-  <td colspan=12 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
+  <td colspan=12 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;text-align: left;'>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:Courier New;font-size:12pt;color:black'><c:out value="${movClassCarPermitPrint.address2}"/></span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:Courier New;font-size:12pt;color:black'><c:out value="${movClassCarPermitPrint.address3}"/></span></b></p>
   <p class=MsoNormal><b><span lang=EN-US style='font-family:Courier New;font-size:12pt;color:black'><c:out value="${movClassCarPermitPrint.address4}"/></span></b></p>
@@ -227,12 +240,12 @@ div.firstpage
  <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 670px;'>
   <tr>
   <td  style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;letter-spacing:
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt;letter-spacing:
   0pt'> (a)</span><span lang=EN-US style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'> </span><span lang=ZH-TW style='font-size:10pt;
   font-family:PMingLiU;letter-spacing:0pt'>引擎號碼 </span><span lang=EN-US style='font-size:10pt'>Engine Number</span></p>
   </td>
   <td  style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:10pt;color:black'>
 	<c:if test="${movClassCarPermitPrint.engineNo== null}">****</c:if>
 	<c:if test="${movClassCarPermitPrint.engineNo!= null}"><c:out value="${movClassCarPermitPrint.engineNo}"/></c:if>
   </span></b></p>
@@ -240,46 +253,46 @@ div.firstpage
  </tr>
  <tr>
   <td style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:7pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:7pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
   <td  style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:7pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:7pt;color:black'>&nbsp;</span></b></p>
   </td>
  </tr>
  <tr>
   <td  style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;letter-spacing:
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt;letter-spacing:
   0pt'> (b)</span><span lang=EN-US style='font-size:10pt'> </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU'>車身底盤號碼</span><span lang=EN-US style='font-size:10pt'> Chassis Number</span></p>
   </td>
   <td  style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'><c:out value="${movClassCarPermitPrint.chassisNo}"/></span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:10pt;color:black'><c:out value="${movClassCarPermitPrint.chassisNo}"/></span></b></p>
   </td>
  </tr>
  <tr>
   <td  style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:7pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:7pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:7pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:7pt;color:black'>&nbsp;</span></b></p>
   </td>
  </tr>
  <tr>
   <td  style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;letter-spacing:
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt;letter-spacing:
   0pt'> (c)</span><span lang=EN-US style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'> </span><span lang=ZH-TW style='font-size:10pt;
   font-family:PMingLiU;letter-spacing:0pt'>車身種類或型號 </span><span lang=EN-US style='font-size:10pt'>Type of Body or Model</span></p>
   </td>
   <td  style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'><c:out value="${movClassCarPermitPrint.bodyTypeDescEng}"/></span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:10pt;color:black'><c:out value="${movClassCarPermitPrint.bodyTypeDescEng}"/></span></b></p>
   </td>
  </tr>
  <tr>
   <td  style='vertical-align: top; width: 300px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:6pt;letter-spacing:
   0pt'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width: 370px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:6pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:6pt;color:black'>&nbsp;</span></b></p>
   </td>
  </tr>
  </table>
@@ -292,7 +305,7 @@ div.firstpage
  <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 670px;'>
  <tr>
   <td  colspan=2 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;letter-spacing:
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt;letter-spacing:
   0pt'> (d)</span><span lang=EN-US style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'> </span><span lang=ZH-TW style='font-size:10pt;
   font-family:PMingLiU;letter-spacing:0pt'>車輛最快速度是每小時</span><span lang=EN-US style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
   </td>
@@ -301,25 +314,25 @@ div.firstpage
  </tr>
  <tr>
   <td style='vertical-align: top; width: 219px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;text-indent:17pt;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt'>Maximum speed of vehicle</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;text-indent:17pt;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt'>Maximum speed of vehicle</span></p>
   </td>
   <td style='vertical-align: top; width: 51px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatNumber pattern="######" value="${movClassCarPermitPrint.maxSpeed}"/></span></b></p>
   </td>
   <td style='vertical-align: top; width: 390px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt'>km. p.h.</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:10pt'>km. p.h.</span></p>
   </td>
  </tr>
  <tr>
   <td style='vertical-align: top; width: 219px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;text-indent:35pt;layout-grid-mode:char'><span lang=EN-US style='font-size:9pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;text-indent:35pt;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:9pt'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width: 51px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><b><span lang=EN-US style='font-size:9pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><b><span lang=EN-US style='font-size:9pt;color:black'>&nbsp;</span></b></p>
   </td>
   <td style='vertical-align: top; width: 390px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:9pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char;margin: 0;line-height: 1.0;'><span lang=EN-US style='font-size:9pt'>&nbsp;</span></p>
   </td>
  </tr>
  </table>
@@ -332,8 +345,8 @@ div.firstpage
  <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 670px;'>
  <tr>
   <td style='vertical-align: top; border-left:medium none; border-right:medium none; border-top:medium none; border-bottom:medium none;padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>這老爺車可在所有道路上行駛，惟須遵守背頁所列明的條件，而且只可在以下獲批准的日期由</span><span lang=ZH-TW style='font-size:10pt;letter-spacing:0pt'> </span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'>0 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>時</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 0 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>分至</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 23 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>時</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 59 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>分行駛︰</span></p>
-        <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt'>in the manner 
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin-top:-0.2cm;'><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>這老爺車可在所有道路上行駛，惟須遵守背頁所列明的條件，而且只可在以下獲批准的日期由</span><span lang=ZH-TW style='font-size:10pt;letter-spacing:0pt'> </span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'>0 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>時</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 0 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>分至</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 23 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>時</span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> 59 </span><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU;letter-spacing:0pt'>分行駛︰</span></p>
+        <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;margin-top:-0.2cm;'>in the manner
           described overleaf on all roads from </span><span style='letter-spacing:0pt'><span lang=EN-US style='font-size:10pt'>00:00</span></span><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'> </span><span lang=EN-US style='font-size:10pt'>hours to<span style='letter-spacing:0pt'> 
           23:59 </span>hours on the dates as endorsed below:-</span></p>
   <p class=MsoNormal style='text-align:justify;text-justify:inter-character;layout-grid-mode:char'><span lang=EN-US style='font-size:8pt'>&nbsp;</span></p>
@@ -346,7 +359,7 @@ div.firstpage
 
  <tr>
   <td>
- <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 670px; height: 128px;'>
+ <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 670px; height: 128px;margin-top: -0.2cm;'>
  <tr>
   <td style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext; border-top:1pt solid windowtext;height:27px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='text-indent:70pt;layout-grid-mode:char'><span lang=ZH-TW style='font-size:10pt;font-family:PMingLiU'>日期</span></p>
@@ -362,83 +375,83 @@ div.firstpage
   </td>
  </tr>
  <tr>
-  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   &nbsp;<fmt:formatDate value="${movClassCarPermitPrint.movementDate01}" pattern="dd/MM/yyyy" />&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate02}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.45pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.45pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate03}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
  </tr>
  <tr>
-  <td style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   &nbsp;<fmt:formatDate value="${movClassCarPermitPrint.movementDate04}" pattern="dd/MM/yyyy" />&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate05}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'>&nbsp;</span><span style='font-size:6pt;letter-spacing:0pt'>&nbsp;&nbsp; </span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:10pt;letter-spacing:0pt'>&nbsp;</span><span style='font-size:6pt;letter-spacing:0pt'>&nbsp;&nbsp; </span></p>
   </td>
-  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate06}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
  </tr>
  <tr>
-  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   &nbsp;<fmt:formatDate value="${movClassCarPermitPrint.movementDate07}" pattern="dd/MM/yyyy" />&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.65pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.65pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate08}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate09}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
  </tr>
  <tr>
-  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-left:1pt solid windowtext; border-right:1pt solid windowtext; border-bottom:1pt solid windowtext;border-top:medium none;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   &nbsp;<fmt:formatDate value="${movClassCarPermitPrint.movementDate10}" pattern="dd/MM/yyyy" />&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td  style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>`
+  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate11}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
-  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:43px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char'><b><span lang=EN-US style='font-size:10pt;color:black'>
+  <td style='vertical-align: top; width: 223px; border-top:medium none;border-left:medium none;border-bottom:1pt solid windowtext;border-right:1pt solid windowtext;height:33px; padding-left:1pt; padding-right:1pt; padding-top:0cm; padding-bottom:0cm'>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:59pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:8pt;color:black'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:58.85pt;layout-grid-mode:char;margin:0; line-height:1;'><b><span lang=EN-US style='font-size:10pt;color:black'>
   <fmt:formatDate value="${movClassCarPermitPrint.movementDate12}" pattern="dd/MM/yyyy" /></span></b></p>
-  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-left:0pt;text-indent:70.55pt;layout-grid-mode:char;margin:0; line-height:1;'><span lang=EN-US style='font-size:6pt;letter-spacing:0pt'>&nbsp;</span></p>
   </td>
  </tr>
  
@@ -449,7 +462,7 @@ div.firstpage
   
  <tr>
   <td style='vertical-align: top; height: 36px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
- <table style="border-collapse: collapse; border-spacing: 0px; border-color: #111111; width: 670px; height: 42px;" id="AutoNumber1">
+ <table style="border-collapse: collapse; border-spacing: 0px; border-color: #111111; width: 670px; height: 42px;margin-top: -0.2cm;" id="AutoNumber1">
   <tr style="display: none;"><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
    <tr>
 	  <td colspan=5 style="vertical-align: top;"><p class=MsoNormal style='margin-left:0pt;layout-grid-mode:char'>&nbsp;</p></td>
@@ -530,7 +543,7 @@ div.firstpage
   <tr style="display: none;"><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
 
 	<TR><TD colspan=8>
-	<table class=MsoNormalTable style='width:670; border-spacing: 0px; margin: 0 auto;'>
+	<table class=MsoNormalTable style='width:670px; border-spacing: 0px; margin: 0 auto;margin-top: 0.2cm;'>
 		<tr>
 		<td><span lang=EN-US style='font-size:11pt'>Chassis</span></td><td> </td><td><span lang=EN-US style='font-size:11pt'>No</span></td><td><span lang=EN-US style='font-size:11pt'>.</span></td><td>&nbsp;</td>			 
 		<td style='width: 140px;'><b><span lang=EN-US style='font-size:11pt;color:black'><c:out value="${movClassCarPermitPrint.chassisNoSplitA}"/></span></b></td><td>&nbsp;</td><td>&nbsp;</td>				
@@ -538,7 +551,7 @@ div.firstpage
 		<td style='width: 70px;'><b><span lang=EN-US style='font-size:11pt;color:black'>
 		<fmt:formatDate value="${movClassCarPermitPrint.issueDate}" pattern="dd/MM/yyyy" /></span></b></td><td>&nbsp;</td><td>&nbsp;</td>  		
 		<td><span lang=EN-US style='font-size:11pt'>Transaction</span></td><td>&nbsp;</td>
-		<td style='width: 80px;'><b><span style='font-size:11pt;color:black'><c:out value="${movClassCarPermitPrint.txnNo}"/></span></b></td>
+		<td style='width: 80px;white-space:nowrap;'><b><span style='font-size:11pt;color:black'><c:out value="${movClassCarPermitPrint.txnNo}"/></span></b></td>
 		<td>&nbsp;</td><td>&nbsp;</td>
 		<td><span lang=EN-US style='font-size:11pt'>No</span></td><td><span lang=EN-US style='font-size:11pt'>.</span></td><td>&nbsp;</td><td><b><span lang=EN-US style='font-size:11pt;color:black'><c:out value="${movClassCarPermitPrint.permitNo}"/></span></b></td><td>&nbsp;</td><td>&nbsp;</td>
 		</tr>
@@ -551,7 +564,7 @@ div.firstpage
 	</TR>
 </THEAD>
 
-<tr>
+<tr style="transform: translateY(-0.4cm);">
   <td colspan=8 style='width: 667px; vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><span lang=ZH-TW style='font-size:11pt;font-family:PMingLiU'>許 可 證 條 件</span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:char'><span lang=EN-US style='font-size:11pt'>Conditions of Permit</span></p>
