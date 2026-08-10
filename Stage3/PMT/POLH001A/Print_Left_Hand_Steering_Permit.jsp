@@ -82,6 +82,15 @@ div.page
 div.firstpage
 	{margin-left:8pt; margin-top:5pt;}
 -->
+.win10_bold {
+ font-family: "MingLiU_HKSCS";
+ font-weight: bold;
+ -webkit-text-stroke: 0.3px;
+}
+p {
+ margin-top: auto;
+ margin-bottom: auto;
+}
 </style>
 
 </head>
@@ -104,7 +113,7 @@ div.firstpage
  <tr style="display: none;"><th>col1</th><th>col2</th><th>col3</th></tr>
  <tr>
   <td colspan=3 style='vertical-align: top; width:495px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm; height: 35px'>
-  <p class=MsoNormal style='text-align:right'><span lang=EN-US
+  <p class=MsoNormal style='text-align:right;margin-top: 0.1cm;'><span lang=EN-US
   style='font-size:10.0pt'>No. <b><span style='color:black'><c:out value=
   "${leftHandPermitPrintValue.permitTypeNo}"/></span></b><span
   style='color:black'>&nbsp; </span></span></p>
@@ -115,34 +124,34 @@ div.firstpage
  <tr>
   <td colspan=3 style='vertical-align: top; width:495px; padding-left:5.4pt;  padding-top:0cm; padding-bottom:0cm; height: 157px' >
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
-  char'><b><span lang=EN-US style='font-size:9.0pt;font-family:MingLiU_HKSCS;
+  char'><span class="win10_bold"><span lang=EN-US style='font-size:9.0pt;font-family:MingLiU_HKSCS;
   letter-spacing:1.0pt'>&nbsp;</span><span lang=ZH-TW style='font-size:9.0pt;font-family:MingLiU_HKSCS;
-  letter-spacing:1.5pt'>香港特別行政區政府運輸署</span></b></p>
+  letter-spacing:1.5pt'>香港特別行政區政府運輸署</span></span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
   char'><b><span lang=EN-US style='font-size:9.0pt'>TRANSPORT DEPARTMENT</span></b></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
   char'><b><span lang=EN-US style='font-size:9.0pt'>THE GOVERNMENT OF THE </span></b><b><span
    lang=EN-US style='font-size:9.0pt'>HONG KONG</span></b><b><span lang=EN-US
   style='font-size:9.0pt'> SPECIAL ADMINISTRATIVE REGION</span></b></p>
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US
-  style='font-size:9.0pt'>&nbsp;</span></p>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height:1pt;'><span lang=EN-US
+  style='font-size:1.0pt'>&nbsp;</span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
-  char'><b><span lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;
-  letter-spacing:1.5pt'>香港法例第三百七十四章道路交通</span></b><b><span lang=EN-US
-  style='font-size:8.0pt;letter-spacing:1.0pt'>(</span></b><b><span lang=ZH-TW
+  char'><span class="win10_bold"><span lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;
+  letter-spacing:1.5pt'>香港法例第三百七十四章道路交通</span></span><span class="win10_bold"><span lang=EN-US
+  style='font-size:8.0pt;letter-spacing:1.0pt'>(</span></span><b><span lang=ZH-TW
   style='font-size:8.0pt;font-family:MingLiU_HKSCS;letter-spacing:1.0pt'>車輛構造及保養</span></b><b><span
-  lang=EN-US style='font-size:8.0pt;letter-spacing:1.0pt'>)</span></b><b><span
-  lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;letter-spacing:1.0pt'>規例</span></b></p>
+  lang=EN-US style='font-size:8.0pt;letter-spacing:1.0pt'>)</span></b><span class="win10_bold"><span
+  lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;letter-spacing:1.0pt'>規例</span></span></p>
   <p class=MsoBodyText><span lang=EN-US style='font-size:8.0pt'>ROAD TRAFFIC
   (CONSTRUCTION & MAINTENANCE OF VEHICLES) REGULATIONS (CAP.374)</span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
   char'><b><span lang=EN-US style='font-size:12.0pt;font-family:MingLiU_HKSCS;
   letter-spacing:1.0pt'>&nbsp;</span></b></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
-  char'><b><span lang=ZH-TW style='font-size:10.0pt;font-family:MingLiU_HKSCS;
+  char;margin-top: -0.3cm'><span class="win10_bold"><span lang=ZH-TW style='font-size:10.0pt;font-family:MingLiU_HKSCS;
   letter-spacing:1.5pt'>許可證
   
-  </span></b></p>
+  </span></span></p>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
   char'><b>
   <span lang=EN-US style='font-size:10.0pt;letter-spacing:1.0pt'>
@@ -162,7 +171,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:7.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char; line-height:1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 493px'>
  <tr style="display: none;"><th>col1</th><th>col2</th></tr>
@@ -187,7 +196,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:6.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 499px; height: 60px' >
  <tr>
@@ -204,7 +213,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:6.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 3pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 491px' >
  <tr>
@@ -260,7 +269,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:7.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 492px'>
  <tr>
@@ -313,7 +322,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:7.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 491px; height: 42px' >
  <tr>
@@ -327,7 +336,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:7.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 493px'>
  <tr>
@@ -354,7 +363,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 487px'>
  <tr>
@@ -394,15 +403,15 @@ div.firstpage
  <tr>
   <td style='vertical-align: top; width:72px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='text-align:justify;text-justify:inter-character;
-  layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt'>&nbsp;</span></p>
+  layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width:163px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='text-align:justify;text-justify:inter-character;
-  layout-grid-mode:char'><span lang=EN-US style='font-size:9.0pt'>&nbsp;</span></p>
+  layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width:210px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='text-align:center;layout-grid-mode:
-  char'><span lang=EN-US style='font-size:9.0pt'>&nbsp;</span></p>
+  char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
   </td>
  </tr>
  <tr>
@@ -437,7 +446,7 @@ div.firstpage
  </tr>
 </table>
 
-<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:6.0pt'>&nbsp;</span></p>
+<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
 
 <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 485px'>
  <tr>
@@ -458,7 +467,7 @@ div.firstpage
 <div class = "page">
 <table class=MsoNormalTable style='margin-left:0pt;border-collapse:collapse; border-spacing: 0px; width: 499px'>
 	<THEAD style="display:table-header-group">
-		<tr>
+		<tr style="transform: translateY(0.1cm);">
 			<td style='vertical-align: top; width:499px' colspan="2">
 				<table class=MsoNormalTable style='border-collapse:collapse; border-spacing: 0px; width:499px; height:3px'>
 				 <tr>
@@ -517,7 +526,7 @@ div.firstpage
   	</p>
 	<p class=MsoNormal style='text-align:center;line-height:200%;layout-grid-mode:char;word-break:break-all'>
 		<span lang=EN-US style='font-size:10.0pt;line-height:200%'>Conditions of Permit</span></p>
-	<p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+	<p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt'>&nbsp;</span></p>
   </td>
  </tr>
 
@@ -529,10 +538,10 @@ div.firstpage
   <td style='vertical-align: top; width:482px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
   <p class=MsoNormal style='layout-grid-mode:char'><span lang=ZH-TW
   style='font-size:8.0pt;font-family:MingLiU_HKSCS;color:black'>此許可證只可行駛以下路線: -</span></p>
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 2pt;'><span lang=EN-US
   style='font-size:8.0pt;color:black'>This permit shall be valid for use during the following specified route(s): -</span></p>
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US
-  style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US
+  style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   
   <p class=MsoNormal style='layout-grid-mode:char'><span lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;letter-spacing:1.5pt'>路線一</span>
   <span lang=EN-US style='font-size:8.0pt;letter-spacing:1.5pt'> / </span><span lang=EN-US style='font-size:8.0pt'>Route 1</span></p>
@@ -545,21 +554,21 @@ div.firstpage
   <p class=MsoNormal style='layout-grid-mode:char'><span lang=ZH-TW style='font-size:8.0pt;font-family:MingLiU_HKSCS;letter-spacing:1.5pt'>其他路線</span>
   <span lang=EN-US style='font-size:8.0pt;letter-spacing:1.5pt'> /</span><span lang=EN-US style='font-size:8.0pt'> Other Route(s)</span></p>
   
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:10.0pt;color:black'><b>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt;color:black'><b>
   <tdcustom:ReplaceEnter value="${leftHandPermitPrintValue.route2}"/></b></span></p>
     
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   </td>
  </tr>
 
  <tr>
   <td style='vertical-align: top; width:13px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:right;layout-grid-mode:char'><span
-  lang=EN-US style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:right;layout-grid-mode:char;line-height: 1pt;'><span
+  lang=EN-US style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width:482px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US
-  style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US
+  style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   </td>
  </tr>
  
@@ -592,12 +601,12 @@ div.firstpage
  
  <tr>
   <td style='vertical-align: top; width:13px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='text-align:right;layout-grid-mode:char'><span
-  lang=EN-US style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='text-align:right;layout-grid-mode:char;line-height: 1pt;'><span
+  lang=EN-US style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   </td>
   <td style='vertical-align: top; width:482px; padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm'>
-  <p class=MsoNormal style='layout-grid-mode:char'><span lang=EN-US
-  style='font-size:8.0pt;color:black'>&nbsp;</span></p>
+  <p class=MsoNormal style='layout-grid-mode:char;line-height: 1pt;'><span lang=EN-US
+  style='font-size:1.0pt;color:black'>&nbsp;</span></p>
   </td>
  </tr>
  </c:forEach>
