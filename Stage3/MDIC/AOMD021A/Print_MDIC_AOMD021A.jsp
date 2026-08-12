@@ -61,7 +61,7 @@
 	</tr>
 	<tr style="transform: translateY(-0.5cm);">
 	  <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-          <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-family:Arial;font-size:9pt'>The following obligatory attendance of driving improvement course notice(s) had been previously sent by post to you, but the said notice(s) was/were returned from the Hong Kong Post. According to our records, you have not yet attended or completed the course(s). The said notice(s), together with this covering letter, is/are now handed to you:</span>
+          <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;margin:0; padding:0; line-height:1.0;'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-family:Arial;font-size:9pt'>The following obligatory attendance of driving improvement course notice(s) had been previously sent by post to you, but the said notice(s) was/were returned from the Hong Kong Post. According to our records, you have not yet attended or completed the course(s). The said notice(s), together with this covering letter, is/are now handed to you:</span>
 	   </p>
 		  </td>
 		<td colspan="3" style="display: none;"></td>
@@ -170,13 +170,13 @@
    </tr>
    <tr style="transform: translateY(-0.3cm);">
      <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-      <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>在你按照通知書所示修習和完成駕駛改進課程之前，根據《道路交通（駕駛執照）規例》第6條，本署不得向你發出或重新發出駕駛執照，或將駕駛執照續期。</span>
+      <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt;margin:0; padding:0; line-height:1.0;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>在你按照通知書所示修習和完成駕駛改進課程之前，根據《道路交通（駕駛執照）規例》第6條，本署不得向你發出或重新發出駕駛執照，或將駕駛執照續期。</span>
 			</p></td>
 	   <td colspan="3" style="display: none;"></td>
 	</tr>
    <tr style="transform: translateY(-0.3cm);">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-         <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-family:Arial;font-size:9pt'>Before you attend and complete the driving improvement course(s) in accordance with the said notice(s), this Department shall not issue, reissue or renew the driving licence to you as provided in regulation 6 of the Road Traffic (Driving Licences) Regulations.</span>
+         <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;margin:0; padding:0; line-height:1.0;'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-family:Arial;font-size:9pt'>Before you attend and complete the driving improvement course(s) in accordance with the said notice(s), this Department shall not issue, reissue or renew the driving licence to you as provided in regulation 6 of the Road Traffic (Driving Licences) Regulations.</span>
 			</p></td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
