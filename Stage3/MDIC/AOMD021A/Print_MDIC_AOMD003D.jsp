@@ -1,11 +1,3 @@
-<style>
-	.win10_bold {
-		font-family: "MingLiU_HKSCS";
-		font-weight: bold;
-		-webkit-text-stroke: 0.3px;
-	}
-</style>
-
 <%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
 <%@ taglib uri="/WEB-INF/tld/fmt.tld" prefix="fmt" %>
 <%@ taglib uri="/WEB-INF/tld/tdcustom.tld" prefix="print"%>
@@ -13,6 +5,13 @@
 <%@ page import="hk.gov.valid.util.RequestConstant"%>
 <%@ page import="hk.gov.valid.util.CodeTableConstant" %>
 
+<style>
+	.win10_bold {
+		font-family: "MingLiU_HKSCS";
+		font-weight: bold;
+		-webkit-text-stroke: 0.3px;
+	}
+</style>
 
 <table style="margin: 0 auto; width: 720px; height: 98%;">
  <tr style="vertical-align: top;">

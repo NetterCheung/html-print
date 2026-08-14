@@ -1,3 +1,10 @@
+<%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
+<%@ taglib uri="/WEB-INF/tld/fmt.tld" prefix="fmt" %>
+<%@ taglib uri="/WEB-INF/tld/tdcustom.tld" prefix="print"%>
+<%@ taglib uri="/WEB-INF/tld/codetable.tld" prefix="codetable"%>
+<%@ page import="hk.gov.valid.util.RequestConstant"%>
+<%@ page import="hk.gov.valid.util.CodeTableConstant" %>
+
 <style>
 	.win10_bold {
 		font-family: "MingLiU_HKSCS";
@@ -5,12 +12,6 @@
 		-webkit-text-stroke: 0.3px;
 	}
 </style>
-<%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
-<%@ taglib uri="/WEB-INF/tld/fmt.tld" prefix="fmt" %>
-<%@ taglib uri="/WEB-INF/tld/tdcustom.tld" prefix="print"%>
-<%@ taglib uri="/WEB-INF/tld/codetable.tld" prefix="codetable"%>
-<%@ page import="hk.gov.valid.util.RequestConstant"%>
-<%@ page import="hk.gov.valid.util.CodeTableConstant" %>
 
 <SCRIPT >
     function getMaskedIdNo(idNo)
