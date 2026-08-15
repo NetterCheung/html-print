@@ -1,14 +1,4 @@
-<style>
-	.page-table {
-		page-break-before: always;
-		margin-left: 5pt;
-		margin-top: 0pt;
-		margin-right: 5pt;
-
-	}
-</style>
-
-<table class="page-table" style="margin: 0 auto">
+<table style="margin: 0 auto">
   <tr style="display: none;">
 	<th></th><th></th><th></th><th></th><th></th><th></th><th></th>
 	<th></th><th></th><th></th><th></th><th></th><th></th><th></th>
@@ -20,7 +10,7 @@
 	  </p> 
      </td>
    </tr>
-   <tr style="transform: translateY(-0.15cm)">
+   <tr>
      <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm; vertical-align: top'> 
        <p class=MsoNormal style='text-align:left;word-wrap:break-word'>
 	       <span lang=ZH-TW style='font-size:5pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>Scheduled Offences Under the Taxi-Driver-Offence Points System</span>
@@ -29,9 +19,9 @@
   </tr>
   <tr>
 	<td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm; vertical-align: top'>
-		<table class="MsoTableGrid table-vsides" style='border:1px solid black; width: 100%; border-spacing: 0px;margin-top: -0.18cm;'>
+		<table class="MsoTableGrid table-vsides" style='border:1px solid black; width: 100%; border-spacing: 0px'>
 			<tr>
-				<td style='border-right:1px solid black;border-bottom:1px solid black; width: 5%; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black;border-bottom:1px solid black; width: 5%; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>項<br>Item</span>
 					</p>
@@ -59,7 +49,7 @@
 			</tr>
 				
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'></span>
 					</p>
@@ -77,7 +67,7 @@
 			</tr>
 				
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>1</span>
 					</p>
@@ -105,7 +95,7 @@
 			</tr>
 
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'></span>
 					</p>
@@ -123,7 +113,7 @@
 			</tr>
 				
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>2</span>
 					</p>
@@ -151,7 +141,7 @@
 			</tr>
 
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>3</span>
 					</p>
@@ -179,7 +169,7 @@
 			</tr>
 				
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>4</span>
 					</p>
@@ -207,7 +197,7 @@
 			</tr>
 			
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>5</span>
 					</p>
@@ -263,7 +253,7 @@
 			</tr>
 			
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>7</span>
 					</p>
@@ -291,7 +281,7 @@
 			</tr>
 			
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>8</span>
 					</p>
@@ -347,7 +337,7 @@
 			</tr>
 			
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>10</span>
 					</p>
@@ -375,7 +365,7 @@
 			</tr>
 			
 			<tr>
-				<td style='border-right:1px solid black; height: 36px; vertical-align: center'>
+				<td style='border-right:1px solid black; height: 40px; vertical-align: center'>
 					<p class=MsoNormal style='text-align: center; word-wrap: break-word'>
 						<span lang=ZH-TW style='font-size: 7pt; font-family: MingLiU_HKSCS; letter-spacing: 0pt'>11</span>
 					</p>
