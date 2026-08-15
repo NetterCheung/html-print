@@ -1,4 +1,35 @@
 <style>
+	@font-face
+	{font-family:MingLiU_HKSCS;
+		panose-1:2 2 3 0 0 0 0 0 0 0;}
+	@font-face
+	{font-family:"\@MingLiU_HKSCS";
+		panose-1:2 2 3 0 0 0 0 0 0 0;}
+	/* Style Definitions */
+	p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+		margin-bottom:.0000pt;
+		font-size:10pt;
+		font-family:"Times New Roman";}
+	h1
+	{margin:0cm;
+		margin-bottom:.0000pt;
+		text-align:center;
+		page-break-after:avoid;layout-grid-mode:char;
+		font-size:10pt;
+		font-family:"Times New Roman";}
+	@page Section1
+	{size:595.3pt 841.9pt;
+		margin:22.7pt 46.3pt 22.7pt 36pt;
+		layout-grid:16pt;}
+
+	ol
+	{margin-bottom:0cm;}
+	ul
+	{margin-bottom:0cm;}
+	div.page
+	{margin-left:0pt; margin-top:0pt;}
+
 	.dop-table-container p {
 		font-size: 5pt !important;
 		line-height: 1.0 !important;
