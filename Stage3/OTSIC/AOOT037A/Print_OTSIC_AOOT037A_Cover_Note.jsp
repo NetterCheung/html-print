@@ -8,7 +8,7 @@
  <tr style="vertical-align:top">
  <td style="text-align:-webkit-center;border:0">
   <table class=MsoTableGrid style='border-collapse:collapse;margin:0 auto;border-spacing:0;width:100%'><tr style="display:none"><th>Col1</th><th>Col2</th><th>Col3</th><th>Col4</th><th>Col5</th><th>Col6</th><th>Col7</th><th>Col8</th><th>Col9</th><th>Col10</th><th>Col11</th><th>Col12</th><th>Col13</th><th>Col14</th><th>Col15</th><th>Col16</th><th>Col17</th><th>Col18</th></tr>
-   <tr>
+   <tr style="transform: translateY(-0.2cm)">
            <td colspan=5 style='width:376px;padding:0px;height:0;text-align:-webkit-left;vertical-align:top;border:0'><img style="border:0" alt="" width=260 height=69 src="<print:BlankFormPrint imageName='TD_Logo.jpg'/>"/>
 			<!--<img width=290 height=74 src="http://localhost:7001/valid/images/TD_Logo.gif"/>-->
             </td>
