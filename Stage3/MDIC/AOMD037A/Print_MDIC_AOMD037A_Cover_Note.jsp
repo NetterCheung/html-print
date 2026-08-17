@@ -1,0 +1,270 @@
+<%@ taglib uri="/WEB-INF/tld/c.tld" prefix="c" %>
+<%@ taglib uri="/WEB-INF/tld/fmt.tld" prefix="fmt" %>
+<%@ taglib uri="/WEB-INF/tld/tdcustom.tld" prefix="print"%>
+<%@ taglib uri="/WEB-INF/tld/codetable.tld" prefix="codetable"%>
+<%@ page import="hk.gov.valid.util.RequestConstant"%>
+<%@ page import="hk.gov.valid.util.CodeTableConstant" %>
+<table style="margin: 0 auto; width: 720px; height: 100%;">
+ <tr style="vertical-align: top;">
+ <td style="text-align: center;">
+  <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 100%; margin: 0 auto;'>
+      <tr style="display:none"><th>Col1</th><th>Col2</th><th>Col3</th><th>Col4</th><th>Col5</th><th>Col6</th><th>Col7</th><th>Col8</th><th>Col9</th><th>Col10</th><th>Col11</th><th>Col12</th><th>Col13</th><th>Col14</th><th>Col15</th><th>Col16</th><th>Col17</th><th>Col18</th></tr>
+   <tr>
+           <td colspan=5 style='width:376px;padding:0cm;height:0;vertical-align:top;text-align:left'><img width=260 height=69 src="<print:BlankFormPrint imageName='TD_Logo.gif'/>" alt=''/>
+			<!--<img width=290 height=74 src="http://localhost:7001/valid/images/TD_Logo.gif"/>-->
+            </td>
+       <td colspan="13" style="display: none;"></td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	 <c:choose>
+			<c:when test="${!empty COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.telNo1}">
+				<p class=MsoNormal style='text-align:left'><span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>電話號碼 </span><span lang=EN-US style='font-family:Arial;font-size:10pt'>Tel No.:</span><span lang=EN-US style='font-family:Arial;font-size:10pt'><span style='color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.telNo1}"/></span></span></p><br>
+			</c:when>
+	 </c:choose>
+     </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+    <tr>
+	  <td  colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span lang=EN-US style='font-family:Arial;font-size:10pt'><c:out value="${MDIC_NOTICE_VALUE.nameEng}"/></span>
+		</p>
+	  </td>
+        <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+	  <td  colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_COVER_NOTICE_VALUE.mailingAddr1}"/></span></p>
+	  </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+	  <td  colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_COVER_NOTICE_VALUE.mailingAddr2}"/></span></p>
+	  </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+	  <td  colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_COVER_NOTICE_VALUE.mailingAddr3}"/></span></p>
+	  </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>先生/女士：</span></p>
+     </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>Dear Sir/Madam,</span></p><br>
+     </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+    <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   		<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>本署曾於<fmt:formatDate value="${MDIC_NOTICE_VALUE.issueDate}" pattern="dd/MM/yyyy" />郵寄強制性修習駕駛改進課程通知書</span><span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>到你的登記地址，但獲香港郵政退回。本署最近獲悉你有另一聯絡地址，故現隨函夾附有關通知書給你。</span>
+	   </p>
+	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'>An Obligatory Attendance of Driving Improvement Course Notice <c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/> was previously sent by post to your registered address
+									on <fmt:formatDate value="${MDIC_NOTICE_VALUE.issueDate}" pattern="dd/MM/yyyy" />, but the said notice was returned from the Hong Kong Post. It is recently noticed that you have another contact address. In this connection, the said notice is resent herewith to you.</span>
+	   		</p>
+     </td>
+        <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   		<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.commissorNameChi}"/><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.contactNameChi}"/></span>
+	   </p>
+	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.commissorNameEng}"/> <c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.contactNameEng}"/></span>
+	   </p>
+     </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">&nbsp;</td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 362px;">&nbsp;</td>
+       <td colspan="13" style="display: none;"></td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">&nbsp;</td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td colspan=14 style='width: 362px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	  	<p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>運輸署署長</span>
+		</p>
+	  </td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">&nbsp;</td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td colspan=14 style='width: 362px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	  	<p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>(<c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.issueOfficerNameChi}"/></span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>代行)</span>
+		</p>
+	  </td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">&nbsp;</td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td colspan=14 style='width: 362px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	  	<p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yours faithfully,</span>
+		</p>
+	  </td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">
+	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>日期</span>
+		</p>
+	  </td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td colspan=14 style='width: 362px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	  	<p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'><span style='color:black'><c:out value="${ISSUE_PRINTING_CTL_VALUE.issueOfficerNameEng}"/></span></span>
+		</p>
+	  </td>
+   </tr>
+    <tr>
+      <td style="width: 130px;">
+	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${MDIC_COVER_NOTICE_VALUE.issueDate}" pattern="dd/MM/yyyy" /></span>
+		</p>
+	  </td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;
+	  </td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td colspan=14 style='width: 362px; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+	  	<p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'>for Commissioner for Transport</span>
+		</p>
+	  </td>
+   </tr>
+   <tr>
+      <td style="width: 130px;">&nbsp;</td>
+	  <td style="width: 150px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 12px;">&nbsp;</td>
+	  <td style="width: 362px;">&nbsp;</td>
+       <td colspan="13" style="display: none;"></td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+       <td colspan="4" style="display: none;"></td>
+   </tr>
+   </table>
+  </td>
+  </tr>
+
+
+  <tfoot >
+  <tr style="vertical-align: bottom;">
+  <td style="text-align: center; width: 100%;">
+  <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 100%; margin: 0 auto;'>
+      <tr style="display:none"><th>Col1</th><th>Col2</th><th>Col3</th><th>Col4</th><th>Col5</th><th>Col6</th><th>Col7</th><th>Col8</th><th>Col9</th><th>Col10</th><th>Col11</th><th>Col12</th><th>Col13</th><th>Col14</th></tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'>
+	   	  <span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>附註：此乃電腦編印通知書，無需授權人員簽署。</span>
+	   </p>
+     </td>
+   </tr>
+    <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'>
+	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'>Note: This is the computer-generated advice which requires no authorized signature.</span>
+	   </p>
+     </td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+	  	<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span style='color:black'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.officeNameChi}"/></span></span>
+	  </p>
+    </td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+	  	<span lang=EN-US style='font-family:Arial;font-size:9pt'><span style='color:black'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.officeNameEng}"/></span></span>
+	  </p>
+    </td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+	  	<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span style='color:black'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.officeAddressChi}"/></span></span>
+	  </p>
+    </td>
+   </tr>
+   <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
+	  	<span lang=EN-US style='font-family:Arial;font-size:9pt'><span style='color:black'><c:out value="${COVER_NOTE_ISSUE_PRINTING_CTL_VALUE.officeAddressEng}"/></span></span>
+	  </p>
+    </td>
+   </tr>
+      <tr>
+    <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+      <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
+    </td>
+   </tr>
+   <tr>
+     <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
+       <p class=MsoNormal style='text-align:left'>
+	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${DUPLICATE_NON_DELIVERED_MDIC_NOTICE_VALUE.workStationId}"/>,
+		  										<c:out value="${DUPLICATE_NON_DELIVERED_MDIC_NOTICE_VALUE.operatorId}"/>,
+												<fmt:formatDate value="${MDIC_COVER_NOTICE_VALUE.printDate}" pattern="dd/MM/yyyy HH:mm:ss" /></span>
+	   </p>
+     </td>
+   </tr>
+  </table>
+  </td></tr>
+  </tfoot>
+</table>
