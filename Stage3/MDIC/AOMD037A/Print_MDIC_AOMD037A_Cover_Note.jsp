@@ -115,7 +115,7 @@
 	  <td style="width: 362px;">&nbsp;</td>
        <td colspan="13" style="display: none;"></td>
    </tr>
-   <tr style="transform: translateY(-0.4cm)">
+   <tr style="transform: translateY(-0.45cm)">
       <td style="width: 130px;">&nbsp;</td>
 	  <td style="width: 150px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -126,7 +126,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr style="transform: translateY(-0.6cm)">
+   <tr style="transform: translateY(-0.65cm)">
       <td style="width: 130px;">&nbsp;</td>
 	  <td style="width: 150px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -137,7 +137,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr style="transform: translateY(-0.9cm)">
+   <tr style="transform: translateY(-0.8cm)">
       <td style="width: 130px;">&nbsp;</td>
 	  <td style="width: 150px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -148,7 +148,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr  style="transform: translateY(-0.9cm)">
+   <tr  style="transform: translateY(-0.85cm)">
       <td style="width: 130px;">
 	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
 			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>日期</span>
@@ -163,7 +163,7 @@
 		</p>
 	  </td>
    </tr>
-    <tr style="transform: translateY(-0.9cm)">
+    <tr style="transform: translateY(-0.85cm)">
       <td style="width: 130px;">
 	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
 			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${MDIC_COVER_NOTICE_VALUE.issueDate}" pattern="dd/MM/yyyy" /></span>
@@ -255,7 +255,7 @@
       <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
     </td>
    </tr>
-   <tr style="transform: translateY(8.5cm)">
+   <tr style="transform: translateY(8.3cm)">
      <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
        <p class=MsoNormal style='text-align:left'>
 	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${DUPLICATE_NON_DELIVERED_MDIC_NOTICE_VALUE.workStationId}"/>,
