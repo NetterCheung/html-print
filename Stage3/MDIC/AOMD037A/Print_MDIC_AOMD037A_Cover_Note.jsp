@@ -255,7 +255,7 @@
       <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p><br>
     </td>
    </tr>
-   <tr style="transform: translateY(8.3cm)">
+   <tr style="transform: translateY(8cm)">
      <td colspan=14 style='padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm;vertical-align:top'>
        <p class=MsoNormal style='text-align:left'>
 	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${DUPLICATE_NON_DELIVERED_MDIC_NOTICE_VALUE.workStationId}"/>,
