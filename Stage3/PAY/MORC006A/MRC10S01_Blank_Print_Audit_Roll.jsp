@@ -43,14 +43,11 @@ body {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 9pt}
 td {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 9pt}
 
 div.page{page-break-after: always}
-table{border-collapse: collapse;}
-tbody tr.underline-row td:nth-child(n+13){border-bottom:1px solid #000000;}
-
 -->
 </style>
 </head>
 <body style="background-color: #FFFFFF; color: #000000;">
-<div style="margin-top:1.0cm;">
+<div>
 <table style="width: 100%; border-spacing: 0px; margin: 0 auto;">
 <THEAD style="display:table-header-group">
 <tr><td>
@@ -134,7 +131,7 @@ tbody tr.underline-row td:nth-child(n+13){border-bottom:1px solid #000000;}
 	<c:forEach var="paymentTxnValue" items="${paymentReceivableValue.paymentTxnValues}" varStatus="secondStatus">
 		<c:set var="oldInterpretation" value=""/>
 		<c:forEach var="paymentTxnDetailValue" items="${paymentTxnValue.paymentTxnDetailsValues}" varStatus="thirdStatus">
-		<tr class="<c:if test="${secondStatus.first && thirdStatus.first}">underline-row</c:if>">
+		<tr>
 			<td style="vertical-align: top;" >
 				<c:if test="${secondStatus.first && thirdStatus.first}">
 					<c:out value="${paymentReceivableValue.operatorId}"/>
@@ -307,7 +304,7 @@ tbody tr.underline-row td:nth-child(n+13){border-bottom:1px solid #000000;}
 	<c:forEach var="paymentTxnValue" items="${paymentReprintValue.paymentTxnValues}" varStatus="secondStatus">
 		<c:set var="oldInterpretation" value=""/>
 		<c:forEach var="paymentTxnDetailValue" items="${paymentTxnValue.paymentTxnDetailsValues}" varStatus="thirdStatus">
-		<tr class="<c:if test="${secondStatus.first && thirdStatus.first}">underline-row</c:if>">
+		<tr>
 			<td style="vertical-align: top;" >
 				<c:if test="${secondStatus.first && thirdStatus.first}">
 					<c:out value="${paymentReprintValue.operatorId}"/>
@@ -420,7 +417,7 @@ tbody tr.underline-row td:nth-child(n+13){border-bottom:1px solid #000000;}
 	<c:forEach var="revertPaymentValueSub" items="${revertPaymentValue.paymentTxnValues}" varStatus="secondStatus">
 		<c:set var="oldInterpretation" value=""/>
 		<c:forEach var="paymentTxnDetailValue" items="${revertPaymentValueSub.paymentTxnDetailsValues}" varStatus="thirdStatus">
-		<tr class="<c:if test="${secondStatus.first && thirdStatus.first}">underline-row</c:if>">
+		<tr>
 			<td style="vertical-align: top;" >
 				<c:if test="${secondStatus.first && thirdStatus.first}">
 					<c:out value="${revertPaymentValue.revertedOperatorId}"/>
