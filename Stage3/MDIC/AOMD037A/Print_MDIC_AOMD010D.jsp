@@ -518,7 +518,7 @@
   <td style="text-align: center; width: 100%;">
   <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 100%; margin: 0 auto;'>
 	  <tr style="display:none"><th>Col1</th><th>Col2</th><th>Col3</th><th>Col4</th><th>Col5</th><th>Col6</th><th>Col7</th><th>Col8</th><th>Col9</th><th>Col10</th><th>Col11</th><th>Col12</th><th>Col13</th><th>Col14</th></tr>
-   <tr style="transform: translateY(-3.8cm)">
+   <tr style="transform: translateY(-3.6cm)">
      <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	  <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p>
        <p class=MsoNormal style='text-align:left'>
@@ -526,7 +526,7 @@
 	   </p>
      </td>
    </tr>
-    <tr style="transform: translateY(-3.9cm)">
+    <tr style="transform: translateY(-3.7cm)">
      <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
        <p class=MsoNormal style='text-align:left'>
 	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'>Note: This is the computer-generated advice which requires no authorized signature.</span>
@@ -540,14 +540,14 @@
 
     </td>
    </tr>
-   <tr style="transform: translateY(-3.7cm)">
+   <tr style="transform: translateY(-3.5cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
 	  	<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span style='color:black'><c:out value="${ISSUE_PRINTING_CTL_VALUE.officeNameChi}"/></span></span>
 	  </p>
     </td>
    </tr>
-   <tr  style="transform: translateY(-3.6cm)">
+   <tr  style="transform: translateY(-3.4cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
 	  	<span lang=EN-US style='font-family:Arial;font-size:9pt'><span style='color:black'><c:out value="${ISSUE_PRINTING_CTL_VALUE.officeNameEng}"/></span></span>
@@ -568,7 +568,7 @@
 	  </p>
     </td>
    </tr>
-      <tr  style="transform: translateY(-3.5cm)">
+      <tr  style="transform: translateY(-3.3cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'><fmt:formatNumber value="${MDIC_NOTICE_VALUE.amendmentCount+1}" pattern="00"/></span></p>
     </td>
