@@ -5,6 +5,14 @@
 <%@ page import="hk.gov.valid.util.RequestConstant"%>
 <%@ page import="hk.gov.valid.util.CodeTableConstant" %>
 
+<style>
+	.win10_bold {
+		font-family: "MingLiU_HKSCS";
+		font-weight: bold;
+		-webkit-text-stroke: 0.3px;
+	}
+</style>
+
 <table style="margin: 0 auto; width: 720px; height: 98%;">
  <tr style="vertical-align: top;">
  <td style="text-align: center; height: 50%;">
@@ -16,7 +24,7 @@
             </td>
 	   <td colspan="12" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.15cm)">
    	  <td style="width: 300px; height: 50%;" >
 	  	<p class=MsoNormal style='text-align:left;line-height:10pt'>
 			<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>檔號 </span><span lang=EN-US style='font-family:Arial;font-size:10pt'>Ref.:</span><span lang=EN-US style='font-family:Arial;font-size:10pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-family:Arial;font-size:10pt'><span style='color:black'><c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></span></span>
@@ -27,7 +35,7 @@
 	  <td style="width: 362px;">&nbsp;</td>
 	   <td colspan="13" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.15cm)">
 	 <td style="width: 300px; height: 20%;">
 	 <c:choose>
 		<c:when test="${!empty ISSUE_PRINTING_CTL_VALUE.telNo1}">
@@ -41,7 +49,7 @@
 	 <td style="width: 362px;">&nbsp;</td>
 	   <td colspan="13" style="display: none;"></td>
    </tr>
-      <tr>
+      <tr style="transform: translateY(-0.2cm)">
     <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
        <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:10pt'><span style='color:black'>
 	  	<c:choose>
@@ -59,7 +67,7 @@
     </td>
 		  <td colspan="3" style="display: none;"></td>
    </tr>
- <tr>
+ <tr style="transform: translateY(-0.2cm)">
 	  <td  colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<span lang=EN-US style='font-family:Arial;font-size:10pt'><c:out value="${MDIC_NOTICE_VALUE.nameEng}"/></span>
@@ -67,51 +75,51 @@
 	  </td>
 	 <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.2cm)">
 	  <td  colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_NOTICE_VALUE.mailingAddr1}"/></span></p>
 	  </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.2cm)">
 	  <td  colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_NOTICE_VALUE.mailingAddr2}"/></span></p>
 	  </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.2cm)">
 	  <td  colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	    <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><c:out value="${MDIC_NOTICE_VALUE.mailingAddr3}"/></span></p>
 	  </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-    <tr>
+    <tr style="transform: translateY(-0.2cm)">
      <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
        <p class=MsoNormal style='text-align:left;line-height:10pt'><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>先生/女士:</span></p>
      </td>
 		<td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.2cm)">
      <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
        <p class=MsoNormal style='text-align:left;line-height:10pt'><span lang=EN-US style='font-family:Arial;font-size:9pt'>Dear Sir/Madam,</span></p>
      </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
 
-   <tr>
+   <tr style="transform: translateY(-0.3cm)">
     <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	  <p class=MsoNormal style='text-align:center;layout-grid-mode:char'>
-		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><b>強制性修習駕駛改進課程通知書</b></span>
+		<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span class="win10_bold">強制性修習駕駛改進課程通知書</span></span>
 	  </p>
 	  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;line-height:10pt'>
 		<span lang=EN-US style='font-family:Arial;font-size:10pt'><b>OBLIGATORY ATTENDANCE OF MANDATORY DRIVING IMPROVEMENT COURSE NOTICE</b></span>
 	  </p>
 	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;line-height:5pt'><span lang=EN-US style='font-family:Arial;font-size:1pt;line-height:5pt'>&nbsp;</span>
 	  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;line-height:10pt'>
-	  	<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><b>通知書檔號：</b></span><span lang=EN-US style='font-family:Arial;font-size:10pt;letter-spacing:0pt'><b><c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></b></span>
+	  	<span lang=ZH-TW style='font-size:10pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span class="win10_bold">通知書檔號：</span></span><span lang=EN-US style='font-family:Arial;font-size:10pt;letter-spacing:0pt'><b><c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></b></span>
 	  </p>
 	  <p class=MsoNormal style='text-align:center;layout-grid-mode:char;line-height:10pt'>
 	  	<span lang=EN-US style='font-family:Arial;font-size:10pt;letter-spacing:0pt'><b>NOTICE REFERENCE NO.:<c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></b></span>
@@ -127,11 +135,11 @@
     </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-0.5cm)">
      <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-       <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+       <p class=MsoNormal style='text-align:left;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>本署曾於<fmt:formatDate value="${MDIC_NOTICE_VALUE.previousIssueDate}" pattern="dd/MM/yyyy" />向你發出強制性修習駕駛改進課程通知書</span><span lang=EN-US style='font-family:Arial;font-size:9pt'><c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/></span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>，通知你須根據《道路交通(違例駕駛記分)條例》(第375章)第8AA(1)條，自費修習及完成駕駛改進課程。</span></p>
-	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'>An Obligatory Attendance of Driving Improvement Course Notice with the reference of <c:out value="${MDIC_NOTICE_VALUE.mdicNoticeRefNo}"/> was issued to you on <fmt:formatDate value="${MDIC_NOTICE_VALUE.previousIssueDate}" pattern="dd/MM/yyyy" /> , informing you that you shall attend and complete a driving improvement course at your own cost in accordance with section 8AA(1) of the Road Traffic (Driving-offence Points) Ordinance, Cap. 375. </span></p>
      </td>
 	   <td colspan="3" style="display: none;"></td>
@@ -144,12 +152,12 @@
     </td>
 		  <td colspan="3" style="display: none;"></td>
    </tr>
-    <tr>
+    <tr  style="transform: translateY(-0.7cm)">
      <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-       <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+       <p class=MsoNormal style='text-align:left;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>本署現通知你，由於你的違例駕駛記分紀錄於發出上述通知書後已有所變更，上述通知書已不再適用。但是，因為你現時被記的違例駕駛分數總分仍達10分或多於10分(你的違例駕駛記分紀錄已表列如下)，所以，按上述條例第8AA(1)條，除非署長另定一段較長期間*，你須在本通知書日期當日之後的3個月內，即<fmt:formatDate value="${MDIC_NOTICE_VALUE.dueDate}" pattern="dd/MM/yyyy" />或之前，自費修習和完成駕駛改進課程。</span>
 	   </p>
-	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'>This serves to inform you that the said notice is no longer applicable as the driving-offence points incurred by you have since been amended.  That said, as the total driving-offence points you have incurred is at 10 or more points, the detail of which is listed below, you shall attend and complete a driving improvement course at your own cost in accordance with section 8AA(1) of the above Ordinance within 3 months after the date of this
 			Notice, ie. on or before <fmt:formatDate value="${MDIC_NOTICE_VALUE.dueDate}" pattern="dd/MM/yyyy" />, unless the Commissioner has fixed a longer period of time*.</span>
 	   </p>
@@ -166,7 +174,7 @@
    </tr>
    <tr>
 	<td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-	  <table style="border-spacing: 0px; border-collapse: collapse">
+	  <table style="border-spacing: 0px; border-collapse: collapse;margin-top:-0.9cm;">
 	    <tr style="display: none;"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 	    <tr>
 		  <td style="width: 30px; vertical-align: middle; height: 14px;"></td>
@@ -360,7 +368,7 @@
 	</td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-1.2cm)">
     <td style='vertical-align: top; height: 50%;' colspan=14>
       <p class=MsoNormal style='text-align:left'>
 	  	<span lang=EN-US style='font-family:Arial;font-size:9pt'>^</span>
@@ -387,11 +395,11 @@
     </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-1.4cm)">
     <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-      <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <p class=MsoNormal style='text-align:left;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>任何人無合理辯解而違反上述第8AA(1)條有關強制性修習駕駛改進課程的規定，即屬犯罪，根據上述條例第8AA(5)條，可被處最高罰款<fmt:formatNumber currencySymbol="${HKD_CURRENCY_SYMBOL}" value="${ISSUE_PRINTING_CTL_VALUE.remark}" />元及監禁1個月。</span></p>
-	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char;margin: 0;padding: 0;line-height: 1.0'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'>A person who, without reasonable excuse, contravenes the said section 8AA(1), which sets out the requirements for the obligatory attendance of driving improvement course commits an offence and is liable to a maximum fine of $<fmt:formatNumber currencySymbol="${HKD_CURRENCY_SYMBOL}" value="${ISSUE_PRINTING_CTL_VALUE.remark}" /> and to imprisonment for 1 month under section 8AA(5) of the above Ordinance. </span></p>
     </td>
 	   <td colspan="3" style="display: none;"></td>
@@ -415,7 +423,7 @@
      </td>
 		<td colspan="3" style="display: none;"></td>
    </tr>
-     <tr>
+     <tr style="transform: translateY(-2.2cm)">
       <td style="width: 300px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -425,7 +433,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-2.5cm)">
 	  <td style="width: 300px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -435,7 +443,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-2.8cm)">
       <td style="width: 300px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
 	  <td style="width: 12px;">&nbsp;</td>
@@ -445,7 +453,7 @@
 		</p>
 	  </td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-2.9cm)">
       <td style="width: 300px;">
 	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
 			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>日期</span>
@@ -459,7 +467,7 @@
 		</p>
 	  </td>
    </tr>
-    <tr>
+    <tr style="transform: translateY(-3.2cm)">
       <td style="width: 300px;">
 	    <p class=MsoNormal style='text-align:left;text-justify:inter-ideograph;layout-grid-mode:char'>
 			<span lang=EN-US style='font-family:Arial;font-family:Arial;font-size:9pt'>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<fmt:formatDate value="${MDIC_NOTICE_VALUE.issueDate}" pattern="dd/MM/yyyy" /></span>
@@ -482,16 +490,14 @@
     </td>
 	  <td colspan="3" style="display: none;"></td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-3.6cm)">
     <td colspan=14 style='vertical-align: top; height: 50%; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
-      <p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt;line-height:10pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-			  <span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>*如你不能在本通知書日期之後的3個月內完成駕駛改進課程，你可在3個月</span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;border-bottom:2pt double #000000'>期限屆滿前</span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>以書面向九龍何文田培正道19號運輸署駕駛事務組提出申請。</span>
-            </p>
-	   <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	   		<span lang=EN-US style='font-family:Arial;font-size:9pt'>*You may apply in writing to the Driving Services Section of the Transport Department at 19 Pui Ching Road, Homantin,Kln </span>
-			<span lang=EN-US style='font-family:Arial;font-size:9pt;border-bottom:2pt double #000000'>before</span>
-			<span lang=EN-US style='font-family:Arial;font-size:9pt'> the end of the period of 3 months if you are not able to complete the driving improvement course within 3 months after the date of this  notice.</span>
-	   </p>
+		<p class=MsoNormal style='text-align:left'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>*如你不能在本通知書日期之後的3個月內完成駕駛改進課程，你可在3個月</span><span lang="ZH-TW" style="font-size:9pt; font-family:MingLiU_HKSCS; position:relative; display:inline-block; padding-bottom:2pt;">期限屆滿前<span style="position:absolute; left:0; bottom:0; width:100%; height:0.75pt; background-color:#000000; display:block;"></span><span style="position:absolute; left:0; bottom:-1.5pt; width:100%; height:0.75pt; background-color:#000000; display:block;"></span></span><span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'>以書面向九龍何文田培正道19號運輸署駕駛事務組提出申請。</span>
+		</p>
+		<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;layout-grid-mode:char'><span lang=EN-US style='font-family:Arial;font-size:9pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<span lang=EN-US style='font-family:Arial;font-size:9pt'>*You may apply in writing to the Driving Services Section of the Transport Department at 19 Pui Ching Road, Homantin,Kln </span><span lang="EN-US" style="font-family:Arial; font-size:9pt; position:relative; display:inline-block; padding-bottom:1pt;">before<span style="position:absolute; left:0; bottom:0; width:100%; height:0.75pt; background-color:#000000; display:block;"></span><span style="position:absolute; left:0; bottom:-1.5pt; width:100%; height:0.75pt; background-color:#000000; display:block;"></span></span><span lang=EN-US style='font-family:Arial;font-size:9pt'> the end of the period of 3 months if you are not able to complete the driving improvement course within 3 months after the date of this  notice.</span>
+		</p>
     </td>
 	   <td colspan="3" style="display: none;"></td>
    </tr>
@@ -512,7 +518,7 @@
   <td style="text-align: center; width: 100%;">
   <table class=MsoTableGrid style='border-collapse:collapse; border-spacing: 0px; width: 100%; margin: 0 auto;'>
 	  <tr style="display:none"><th>Col1</th><th>Col2</th><th>Col3</th><th>Col4</th><th>Col5</th><th>Col6</th><th>Col7</th><th>Col8</th><th>Col9</th><th>Col10</th><th>Col11</th><th>Col12</th><th>Col13</th><th>Col14</th></tr>
-   <tr>
+   <tr style="transform: translateY(-3.8cm)">
      <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
 	  <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'></span></p>
        <p class=MsoNormal style='text-align:left'>
@@ -520,7 +526,7 @@
 	   </p>
      </td>
    </tr>
-    <tr>
+    <tr style="transform: translateY(-3.9cm)">
      <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
        <p class=MsoNormal style='text-align:left'>
 	   	  <span lang=EN-US style='font-family:Arial;font-size:9pt'>Note: This is the computer-generated advice which requires no authorized signature.</span>
@@ -534,14 +540,14 @@
 
     </td>
    </tr>
-   <tr>
+   <tr style="transform: translateY(-3.7cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
 	  	<span lang=ZH-TW style='font-size:9pt;font-family:MingLiU_HKSCS;letter-spacing:0pt'><span style='color:black'><c:out value="${ISSUE_PRINTING_CTL_VALUE.officeNameChi}"/></span></span>
 	  </p>
     </td>
    </tr>
-   <tr>
+   <tr  style="transform: translateY(-3.6cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:center;text-justify:inter-ideograph;layout-grid-mode:char'>
 	  	<span lang=EN-US style='font-family:Arial;font-size:9pt'><span style='color:black'><c:out value="${ISSUE_PRINTING_CTL_VALUE.officeNameEng}"/></span></span>
@@ -562,7 +568,7 @@
 	  </p>
     </td>
    </tr>
-      <tr>
+      <tr  style="transform: translateY(-3.5cm)">
     <td colspan=14 style='vertical-align: top; padding-left:0pt; padding-right:0pt; padding-top:0cm; padding-bottom:0cm'>
       <p class=MsoNormal style='text-align:right'><span lang=EN-US style='font-family:Arial;font-size:9pt'><fmt:formatNumber value="${MDIC_NOTICE_VALUE.amendmentCount+1}" pattern="00"/></span></p>
     </td>
