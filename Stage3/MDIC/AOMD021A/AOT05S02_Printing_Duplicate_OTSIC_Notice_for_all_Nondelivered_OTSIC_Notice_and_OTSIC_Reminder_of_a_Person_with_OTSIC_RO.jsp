@@ -93,8 +93,8 @@ div.firstpage
 </c:forEach>
 
 <c:if test="${countNo < 32}">
-<div class="page" style="PAGE-BREAK-AFTER: always">
-   <table>
+<div class="page" style="PAGE-BREAK-BEFORE: always;PAGE-BREAK-AFTER: always;height: 100%;">
+   <table style="height: 100%;width: 100%">
 	    <tr>
 		    <td>
 			    <p class=MsoNormal style='text-align:right;word-break:break-all;text-align:right'><span lang=EN-US style='font-size:10pt'></span></p><br>
@@ -127,8 +127,8 @@ div.firstpage
 
 <!-- 4. Leave a blank page for duplex-printing by Alison for CR-2013-021 on 30 Oct 2013 
 <DIV style="PAGE-BREAK-AFTER: always">&nbsp;</DIV> -->	
-<div class=page>
-    <table>
+<div class=page style="PAGE-BREAK-BEFORE: always;PAGE-BREAK-AFTER: always;height: 100%;">
+    <table style="height: 100%;width: 100%">
 	    <tr>
 		    <td>
 			    <p class=MsoNormal style='text-align:right;word-break:break-all;text-align:right'><span lang=EN-US style='font-size:10pt'></span></p><br>
