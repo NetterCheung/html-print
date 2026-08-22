@@ -1307,9 +1307,8 @@ div.page{page-break-before:always;margin-left:12pt; margin-top:2pt;}
 		dHeight = parseInt('18');
 	}catch(e){}
 	
-	if(document.getElementsByName("annexDTR1") != null) {
-		var trLength = document.getElementsByName("annexDTR1").length;
-	}
+	var trLength = document.getElementsByName("annexDTR1").length;
+
 	
 	var specCount = 0;
 	for (i=0,j=0;i<trLength*3&&j<trLength;i=i+3,j++){
@@ -1379,17 +1378,13 @@ div.page{page-break-before:always;margin-left:12pt; margin-top:2pt;}
 		addSpaceRow(page1Table);
 
 		if(page1Table.offsetHeight > (tableHeight - 70 - firstConditionTable.offsetHeight)) {
-			page1Table.deleteRow(i+2);
-			page1Table.deleteRow(i+1);
-			page1Table.deleteRow(i);
-			if(specCount == 1){
-				try{
-					page1Table.deleteRow(i-1);
-				}catch(e){}
-			}
-			i--;
-			i--;
-			i--;
+			try {
+				page1Table.deleteRow(i+2);
+				page1Table.deleteRow(i+1);
+				page1Table.deleteRow(i);
+				if(specCount == 1 && i > 0){ page1Table.deleteRow(i-1); }
+			} catch(e) { /* keep going */ }
+			i -= 3;
 			insertData(j);
 		}
 	}
@@ -1503,18 +1498,17 @@ div.page{page-break-before:always;margin-left:12pt; margin-top:2pt;}
 			
 			// for english
 			if (w2 > 321 && w2 < 366 && h2 > 15 && h2 < 30) {
-				content
 				heightPlus += 14;
 			}
-			
+
 			if($(table).offsetHeight > tableHeight + heightPlus + dHeight) {
-				$(table).deleteRow(i+2);
-				$(table).deleteRow(i+1);
-				$(table).deleteRow(i);
-				$(table).deleteRow(i-1);
-				i--;
-				i--;
-				i--;
+				try {
+					$(table).deleteRow(i+2);
+					$(table).deleteRow(i+1);
+					$(table).deleteRow(i);
+					if (i > 0) { $(table).deleteRow(i-1); }
+				} catch(e) { /* keep going */ }
+				i -= 3;
 				return j;
 			}
 			
